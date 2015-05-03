@@ -1,0 +1,1743 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02AA71DF10C4B702F0B5B027 /* SlideNavigationContorllerAnimatorSlide.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C2C9648CBB6FB279C4D4BC /* SlideNavigationContorllerAnimatorSlide.h */; };
+		081FCFE7FD22CEB39884B7FF /* Pods-TLTalk-BDKNotifyHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB50EB320A30324BAD49D0C9 /* Pods-TLTalk-BDKNotifyHUD-dummy.m */; };
+		10B0E4456D62771113A6100A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC999C20911B2A64189B3328 /* Foundation.framework */; };
+		153A173F451430DAEB8D0406 /* Pods-TLTalk-DropdownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F4D3914E409890C0C2542 /* Pods-TLTalk-DropdownMenu-dummy.m */; };
+		186C0E04123C3DF023AB077A /* NSString+FontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D50DC1C5D3ADE4DF083FEF0 /* NSString+FontAwesome.h */; };
+		1C37B9073FE567A78186E888 /* FAKFontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 715C15B9E2B939F11D20C8A9 /* FAKFontAwesome.h */; };
+		20D9AB0C4E04832C91D28077 /* SlideNavigationContorllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CA5525B1F3E4B547ACD6DF7E /* SlideNavigationContorllerAnimator.h */; };
+		253BBA9106169268462685C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985A4A6096FCD7AFAA6E91E4 /* UIKit.framework */; };
+		28029C70BE96E83CCBDB2817 /* Pods-TLTalk-SMPageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FCD84B1E6FEF0D13379074 /* Pods-TLTalk-SMPageControl-dummy.m */; };
+		2E30DCC48B8876C0015E4B5B /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EBCE4274DB87E1B272CEB7 /* SlideNavigationContorllerAnimatorSlide.m */; };
+		2FFFB8B2ECA960D47780E8FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3799DECBF7A900B34E156970 /* QuartzCore.framework */; };
+		302D38C3C8DAAB8708D41D35 /* Pods-TLTalk-EARestrictedScrollView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C36AC662AA8E0A95A1D1A7 /* Pods-TLTalk-EARestrictedScrollView-dummy.m */; };
+		36E516D37E98BF8F91F07C43 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7675DB01231893EE1B7E5B /* SlideNavigationContorllerAnimatorFade.m */; };
+		3FF2A6ED3126E41F5CA288ED /* SlideNavigationContorllerAnimatorScaleAndFade.h in Headers */ = {isa = PBXBuildFile; fileRef = B7F8C4F09D730629440BEF0E /* SlideNavigationContorllerAnimatorScaleAndFade.h */; };
+		42919FE7D69A61E3C14A6E5C /* EARestrictedScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6E75491DED4DB35281BD9E /* EARestrictedScrollView.h */; };
+		46A03843252DE1CB14C79C73 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AF74E92349AB6191C2766C /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		48E63B9D234098CEA2C1AE78 /* EAIntroView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2A61A93418901BEE49368C /* EAIntroView.h */; };
+		4BD73B8B5D9C5DADC1595086 /* Pods-TLTalk-EAIntroView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6D1144B0E5612AB014CD6C /* Pods-TLTalk-EAIntroView-dummy.m */; };
+		4F089A2164AC17459D1E22DB /* Pods-TLTalk-FontAwesomeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3CE73362B7BC7E29F7481F /* Pods-TLTalk-FontAwesomeKit-dummy.m */; };
+		517A73D427ED0FD7D3B7BB46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC999C20911B2A64189B3328 /* Foundation.framework */; };
+		535A02DF528AF792508694BD /* FAKZocial.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFF8246613CEA5D5AFA4CBF /* FAKZocial.m */; };
+		577733337CCDA626617FBD07 /* Pods-TLTalk-iOS-Slide-Menu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FE669DE487283B4C5C10A4 /* Pods-TLTalk-iOS-Slide-Menu-dummy.m */; };
+		5A4D86F8351F12D7DFDEBE02 /* FAKIonIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2D98E1F7215D389F9ECFD7 /* FAKIonIcons.h */; };
+		5A948457560D8DDCE7B614B9 /* SWFrameButton.h in Headers */ = {isa = PBXBuildFile; fileRef = DED134E95D6E79899143895A /* SWFrameButton.h */; };
+		5BFDB8E45E20A69C8B039C55 /* BButton.h in Headers */ = {isa = PBXBuildFile; fileRef = CF07436CF0D05764ACE73594 /* BButton.h */; };
+		5E66BFC716602DDDCD66EFD7 /* FAKFoundationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = A37B8E5B69FFA477E2545424 /* FAKFoundationIcons.m */; };
+		65B2FCB0C49C8AFE2410845B /* SlideNavigationContorllerAnimatorScale.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E36A0397A6FEE74071C67A1 /* SlideNavigationContorllerAnimatorScale.h */; };
+		6A63B30ADFF8909FF324C929 /* SlideNavigationContorllerAnimatorFade.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C55EB17718905E65E47B7E /* SlideNavigationContorllerAnimatorFade.h */; };
+		6AB7DB95C00A44AEFD1ED708 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC999C20911B2A64189B3328 /* Foundation.framework */; };
+		6C3C62E545EC78F49452D8EE /* FAKIonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BBB1D941C3704F790F9E0B /* FAKIonIcons.m */; };
+		6F59191A6CC2AF0712BEBCD7 /* UIColor+BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA19F5544D487980440760EA /* UIColor+BButton.m */; };
+		74A0B238126D58DC23A57598 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC999C20911B2A64189B3328 /* Foundation.framework */; };
+		78DD32B36753A9FB3B6F3A7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC999C20911B2A64189B3328 /* Foundation.framework */; };
+		7918D198EDE71BD20FD182EB /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 35713D494591F55D30F9403A /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		7B80AD6BF2DEA33F6E8FEF11 /* DropdownMenuSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 42E1E19E40EAAC5623C1C62E /* DropdownMenuSegue.h */; };
+		7CFB8D05A4297D2716D889CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAEDD8E226118D9EF165CE9 /* CoreGraphics.framework */; };
+		8DF958084FCB365A3F28C007 /* FAKFoundationIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = FD99C1BC0BC63F04B677141A /* FAKFoundationIcons.h */; };
+		90BE27414D3E345332917F2B /* FAKIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A592A314FD743ED7B6CFF5 /* FAKIcon.h */; };
+		915A0448A2FED42575D6DB04 /* FAKZocial.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E9E99EF0F8FFB4E983A95E /* FAKZocial.h */; };
+		93A80B69EB4F5AB8429C4C52 /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C9B870BA9F1E17F248CB77 /* FAKIcon.m */; };
+		97D18DEBDD4AF32C8E0AF62D /* FontAwesomeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3237821A270AFA36976462 /* FontAwesomeKit.h */; };
+		9ACCE9D2B5ACA7747478FB50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985A4A6096FCD7AFAA6E91E4 /* UIKit.framework */; };
+		9B1E0A1D798CB2D4B26A3A70 /* UIColor+BButton.h in Headers */ = {isa = PBXBuildFile; fileRef = FE485C045524D18E35A51E23 /* UIColor+BButton.h */; };
+		9F3FC33B0ADF15E66D7D9FA1 /* BDKNotifyHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0BEB2F55975A216DD2B8D /* BDKNotifyHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A24381B925A7F72BBAE22771 /* DropdownMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E1CF0EAED1BD40A8F6967F /* DropdownMenuController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A8211D9BB9FA8EA830D90620 /* Pods-TLTalk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 051D1EA1A6B44892282A82F8 /* Pods-TLTalk-dummy.m */; };
+		B14B6C840CE33D6C164E3D30 /* Pods-TLTalk-SWFrameButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6A73F4639DBD840C312A3B /* Pods-TLTalk-SWFrameButton-dummy.m */; };
+		BB824DFAA1209520FB9DDF14 /* DropdownMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C64D15B18192F78C27CBE2 /* DropdownMenuSegue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BEA035F33FD1A1CFA2A29606 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE5E0913D1247C8CFE8A559 /* EAIntroView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BFB2EFBADFBE225B5532DBF4 /* SMPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D1E94E2150D5A34527274F6 /* SMPageControl.h */; };
+		C15FB39D3B8BA18A3924E1D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC999C20911B2A64189B3328 /* Foundation.framework */; };
+		C3040491A91DE25EDA51E77C /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = A71262E6C7A61CC4CD39CE6D /* SlideNavigationContorllerAnimatorScale.m */; };
+		C47034AE35908B18209D12A5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3799DECBF7A900B34E156970 /* QuartzCore.framework */; };
+		C61741D39E6E356B1B15D318 /* EAIntroPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DA850F25B8DE03993772468 /* EAIntroPage.h */; };
+		C66950421DAB28486B7B408D /* BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EB36171FFE5CECBBA86725 /* BButton.m */; };
+		CC0544F91BB0BB1BC9771CEC /* EARestrictedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F94B8738C5D0445DD078DF24 /* EARestrictedScrollView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CEC908C1D5382F16C6DB4083 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC13BE2FB8850A956FCBC1C /* SMPageControl.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CF4CA28E8024A6FF2594BC66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC999C20911B2A64189B3328 /* Foundation.framework */; };
+		D1CC08DDF8429DCE497F7410 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC999C20911B2A64189B3328 /* Foundation.framework */; };
+		D445DA6441E525D203EDAACF /* BDKNotifyHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2520534435DCCFBCEE8AAB7D /* BDKNotifyHUD.h */; };
+		D87BC24E703699F376CFDA1E /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18974B29BCD02A1A9A1FD1 /* SlideNavigationController.m */; };
+		DB110D8E328D460F3B775381 /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = E300FDAD7AF23E85014301E1 /* FAKFontAwesome.m */; };
+		DE76E9430C005F2EC5ACBF7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC999C20911B2A64189B3328 /* Foundation.framework */; };
+		E211E80504D8D2927F672176 /* SlideNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 01BA07531EA73D36E166C48B /* SlideNavigationController.h */; };
+		E49C0D2F01702CE2F3CAEC50 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B785B0661FF3A292AE84A2C /* NSString+FontAwesome.m */; };
+		E6DCFC64003111ADB53FDDFD /* SlideNavigationContorllerAnimatorSlideAndFade.h in Headers */ = {isa = PBXBuildFile; fileRef = A865BE7E08BCF8E3D01E838A /* SlideNavigationContorllerAnimatorSlideAndFade.h */; };
+		EAECEE3FD7D45CAEA507BC53 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A99DB6B91438B2ED70F656 /* EAIntroPage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EE596C4A10086AD3BE4F3544 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C0D18AADB6F69DFBFF5578 /* CoreText.framework */; };
+		EE7F26CFFCC8871940D16692 /* Pods-TLTalk-BButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 023449C88B55ABE45888C9B4 /* Pods-TLTalk-BButton-dummy.m */; };
+		F30A57D9F82E822D3254C587 /* SWFrameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C227E4F2DDA4F364766E915F /* SWFrameButton.m */; };
+		F67C537169766F5DE16BFCFB /* DropdownMenuController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB14D8D0040A1BFD387FEDD /* DropdownMenuController.h */; };
+		FB8DD384029DE3224876A2C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC999C20911B2A64189B3328 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E5BD7FAAA07C90CFA3C8279 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAA3DB0D164D30F260A63944;
+			remoteInfo = "Pods-TLTalk-EARestrictedScrollView";
+		};
+		44CEE7C8B4770C115547FD81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F98DED46D18384A4FF1EA4A;
+			remoteInfo = "Pods-TLTalk-iOS-Slide-Menu";
+		};
+		5D25192A49F20E500E2AC07C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA976A597A36EF17983B1335;
+			remoteInfo = "Pods-TLTalk-SWFrameButton";
+		};
+		70389765A1DBD0FDBB3AD21B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 075984A4AD6467586E1714C7;
+			remoteInfo = "Pods-TLTalk-BButton";
+		};
+		7D782C3D766EF9F23C523006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79758195817E470C320ADCC0;
+			remoteInfo = "Pods-TLTalk-DropdownMenu";
+		};
+		902A8CF7551823B416DCCB5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03CCA790C463BFBF05863840;
+			remoteInfo = "Pods-TLTalk-EAIntroView";
+		};
+		92E7DB83FD4931C275AA2207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D1634B35484FD2260484733;
+			remoteInfo = "Pods-TLTalk-FontAwesomeKit";
+		};
+		A55086BD0DF282C6D8EA013E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 649A40BF7CD93034357DE15C;
+			remoteInfo = "Pods-TLTalk-SMPageControl";
+		};
+		C29276F89BD36072D11FB97F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 176C6B61F89BB54209AED009;
+			remoteInfo = "Pods-TLTalk-BDKNotifyHUD";
+		};
+		D7177C2AB9FDBD327849CA1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAA3DB0D164D30F260A63944;
+			remoteInfo = "Pods-TLTalk-EARestrictedScrollView";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01BA07531EA73D36E166C48B /* SlideNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationController.h; path = SlideMenu/Source/SlideNavigationController.h; sourceTree = "<group>"; };
+		023449C88B55ABE45888C9B4 /* Pods-TLTalk-BButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTalk-BButton-dummy.m"; sourceTree = "<group>"; };
+		02BBB1D941C3704F790F9E0B /* FAKIonIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIonIcons.m; path = FontAwesomeKit/FAKIonIcons.m; sourceTree = "<group>"; };
+		03297FD9CFD8DB5B94EA7542 /* Pods-TLTalk-BDKNotifyHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-BDKNotifyHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		051D1EA1A6B44892282A82F8 /* Pods-TLTalk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTalk-dummy.m"; sourceTree = "<group>"; };
+		0C381F813318B5D64AED7582 /* Pods-TLTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk.release.xcconfig"; sourceTree = "<group>"; };
+		0D50DC1C5D3ADE4DF083FEF0 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "BButton/Classes/NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		0FAEDD8E226118D9EF165CE9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		10EFA8CF4AE81B145029EF96 /* libPods-TLTalk-SMPageControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk-SMPageControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19EE675B3931CB75DEF66AA7 /* Pods-TLTalk-DropdownMenu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-DropdownMenu-Private.xcconfig"; sourceTree = "<group>"; };
+		1A6D1144B0E5612AB014CD6C /* Pods-TLTalk-EAIntroView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTalk-EAIntroView-dummy.m"; sourceTree = "<group>"; };
+		1B7675DB01231893EE1B7E5B /* SlideNavigationContorllerAnimatorFade.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorFade.m; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorFade.m; sourceTree = "<group>"; };
+		1D3237821A270AFA36976462 /* FontAwesomeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FontAwesomeKit.h; path = FontAwesomeKit/FontAwesomeKit.h; sourceTree = "<group>"; };
+		1DD48323458C50FE3EEBF24C /* libPods-TLTalk-BButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk-BButton.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C36AC662AA8E0A95A1D1A7 /* Pods-TLTalk-EARestrictedScrollView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTalk-EARestrictedScrollView-dummy.m"; sourceTree = "<group>"; };
+		20D770B3178BD81AAA25E0B9 /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.ttf; path = BButton/resources/FontAwesome.ttf; sourceTree = "<group>"; };
+		2439829780D691E498FCFFE2 /* Pods-TLTalk-SWFrameButton-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-SWFrameButton-Private.xcconfig"; sourceTree = "<group>"; };
+		2520534435DCCFBCEE8AAB7D /* BDKNotifyHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BDKNotifyHUD.h; path = BDKNotifyHUD/BDKNotifyHUD.h; sourceTree = "<group>"; };
+		27C0D18AADB6F69DFBFF5578 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		2D2A61A93418901BEE49368C /* EAIntroView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EAIntroView.h; path = EAIntroView/EAIntroView.h; sourceTree = "<group>"; };
+		2DA850F25B8DE03993772468 /* EAIntroPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EAIntroPage.h; path = EAIntroView/EAIntroPage.h; sourceTree = "<group>"; };
+		32C64D15B18192F78C27CBE2 /* DropdownMenuSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DropdownMenuSegue.m; path = DropdownMenu/DropdownMenuSegue.m; sourceTree = "<group>"; };
+		35713D494591F55D30F9403A /* SlideNavigationContorllerAnimatorSlideAndFade.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorSlideAndFade.m; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorSlideAndFade.m; sourceTree = "<group>"; };
+		3799DECBF7A900B34E156970 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		41C9F1D35A4AC3EC7DBE121B /* Pods-TLTalk-EARestrictedScrollView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-EARestrictedScrollView.xcconfig"; sourceTree = "<group>"; };
+		42AA6840B58FA9D2BFAA1561 /* libPods-TLTalk-EAIntroView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk-EAIntroView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E1E19E40EAAC5623C1C62E /* DropdownMenuSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DropdownMenuSegue.h; path = DropdownMenu/DropdownMenuSegue.h; sourceTree = "<group>"; };
+		45DC07FCCF59BCE229690239 /* Pods-TLTalk-BButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-BButton.xcconfig"; sourceTree = "<group>"; };
+		46E1CF0EAED1BD40A8F6967F /* DropdownMenuController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DropdownMenuController.m; path = DropdownMenu/DropdownMenuController.m; sourceTree = "<group>"; };
+		480FB37E9D3247EC6D53E5DB /* ionicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = ionicons.ttf; path = FontAwesomeKit/ionicons.ttf; sourceTree = "<group>"; };
+		48C2C9648CBB6FB279C4D4BC /* SlideNavigationContorllerAnimatorSlide.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorSlide.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorSlide.h; sourceTree = "<group>"; };
+		49EB36171FFE5CECBBA86725 /* BButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BButton.m; path = BButton/Classes/BButton.m; sourceTree = "<group>"; };
+		4A2D98E1F7215D389F9ECFD7 /* FAKIonIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIonIcons.h; path = FontAwesomeKit/FAKIonIcons.h; sourceTree = "<group>"; };
+		4B6E75491DED4DB35281BD9E /* EARestrictedScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EARestrictedScrollView.h; path = EARestrictedScrollView/EARestrictedScrollView.h; sourceTree = "<group>"; };
+		4B785B0661FF3A292AE84A2C /* NSString+FontAwesome.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+FontAwesome.m"; path = "BButton/Classes/NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		4E36A0397A6FEE74071C67A1 /* SlideNavigationContorllerAnimatorScale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorScale.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorScale.h; sourceTree = "<group>"; };
+		6144A807F68F7FF6F2201D47 /* Pods-TLTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		6B3922351D5D976FB4E50970 /* Pods-TLTalk-EARestrictedScrollView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTalk-EARestrictedScrollView-prefix.pch"; sourceTree = "<group>"; };
+		6BAC7B613F66EF61317FEE06 /* Pods-TLTalk-BButton-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-BButton-Private.xcconfig"; sourceTree = "<group>"; };
+		6D0F4D3914E409890C0C2542 /* Pods-TLTalk-DropdownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTalk-DropdownMenu-dummy.m"; sourceTree = "<group>"; };
+		6D18974B29BCD02A1A9A1FD1 /* SlideNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationController.m; path = SlideMenu/Source/SlideNavigationController.m; sourceTree = "<group>"; };
+		6E6B653DA8B5BAF7CFE4E444 /* menu-button@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "menu-button@2x.png"; path = "SlideMenu/Source/Assets/menu-button@2x.png"; sourceTree = "<group>"; };
+		6EE5E0913D1247C8CFE8A559 /* EAIntroView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EAIntroView.m; path = EAIntroView/EAIntroView.m; sourceTree = "<group>"; };
+		714E9F72333367280EADBE0E /* Pods-TLTalk-EAIntroView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTalk-EAIntroView-prefix.pch"; sourceTree = "<group>"; };
+		715C15B9E2B939F11D20C8A9 /* FAKFontAwesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFontAwesome.h; path = FontAwesomeKit/FAKFontAwesome.h; sourceTree = "<group>"; };
+		726259026F9D4C87AED72B98 /* Pods-TLTalk-DropdownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTalk-DropdownMenu-prefix.pch"; sourceTree = "<group>"; };
+		7382561698FD8EC5073F2FF0 /* Pods-TLTalk-FontAwesomeKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-FontAwesomeKit-Private.xcconfig"; sourceTree = "<group>"; };
+		75A99DB6B91438B2ED70F656 /* EAIntroPage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EAIntroPage.m; path = EAIntroView/EAIntroPage.m; sourceTree = "<group>"; };
+		7A68BD14823CB0EA9CE1BB02 /* Pods-TLTalk-SMPageControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-SMPageControl-Private.xcconfig"; sourceTree = "<group>"; };
+		7DC13BE2FB8850A956FCBC1C /* SMPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
+		81A592A314FD743ED7B6CFF5 /* FAKIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIcon.h; path = FontAwesomeKit/FAKIcon.h; sourceTree = "<group>"; };
+		83E9E99EF0F8FFB4E983A95E /* FAKZocial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKZocial.h; path = FontAwesomeKit/FAKZocial.h; sourceTree = "<group>"; };
+		84370A6DF84205D699D0B966 /* Pods-TLTalk-EAIntroView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-EAIntroView.xcconfig"; sourceTree = "<group>"; };
+		87A48F78867AA1AFCDD78718 /* Pods-TLTalk-SMPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTalk-SMPageControl-prefix.pch"; sourceTree = "<group>"; };
+		882868FBC5BC5390036409CB /* Pods-TLTalk-SMPageControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-SMPageControl.xcconfig"; sourceTree = "<group>"; };
+		8D1E94E2150D5A34527274F6 /* SMPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
+		8F3CE73362B7BC7E29F7481F /* Pods-TLTalk-FontAwesomeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTalk-FontAwesomeKit-dummy.m"; sourceTree = "<group>"; };
+		92EBCE4274DB87E1B272CEB7 /* SlideNavigationContorllerAnimatorSlide.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorSlide.m; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorSlide.m; sourceTree = "<group>"; };
+		95FCD84B1E6FEF0D13379074 /* Pods-TLTalk-SMPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTalk-SMPageControl-dummy.m"; sourceTree = "<group>"; };
+		985A4A6096FCD7AFAA6E91E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		98BD7B752E2E706B1C6DE28F /* libPods-TLTalk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB0BEB2F55975A216DD2B8D /* BDKNotifyHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BDKNotifyHUD.m; path = BDKNotifyHUD/BDKNotifyHUD.m; sourceTree = "<group>"; };
+		9D7EDA547053772D328735C7 /* Pods-TLTalk-BDKNotifyHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-BDKNotifyHUD.xcconfig"; sourceTree = "<group>"; };
+		9DB172461306D3C96A7F651F /* menu-button.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "menu-button.png"; path = "SlideMenu/Source/Assets/menu-button.png"; sourceTree = "<group>"; };
+		9FE524EB8F75774AEF1BECFF /* Pods-TLTalk-SWFrameButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTalk-SWFrameButton-prefix.pch"; sourceTree = "<group>"; };
+		A119AA08DA08C5E46E9EB5C8 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		A1AF74E92349AB6191C2766C /* SlideNavigationContorllerAnimatorScaleAndFade.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorScaleAndFade.m; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorScaleAndFade.m; sourceTree = "<group>"; };
+		A218ED24F2C6559D4D7A87AC /* Pods-TLTalk-EARestrictedScrollView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-EARestrictedScrollView-Private.xcconfig"; sourceTree = "<group>"; };
+		A37B8E5B69FFA477E2545424 /* FAKFoundationIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFoundationIcons.m; path = FontAwesomeKit/FAKFoundationIcons.m; sourceTree = "<group>"; };
+		A71262E6C7A61CC4CD39CE6D /* SlideNavigationContorllerAnimatorScale.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorScale.m; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorScale.m; sourceTree = "<group>"; };
+		A77D7F7426FE4296DDCDE6DE /* libPods-TLTalk-iOS-Slide-Menu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk-iOS-Slide-Menu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A865BE7E08BCF8E3D01E838A /* SlideNavigationContorllerAnimatorSlideAndFade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorSlideAndFade.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorSlideAndFade.h; sourceTree = "<group>"; };
+		AA3015E1CDB47D8241C9B19C /* libPods-TLTalk-EARestrictedScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk-EARestrictedScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B467CD3071E822FAF7F6F941 /* Pods-TLTalk-iOS-Slide-Menu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-iOS-Slide-Menu-Private.xcconfig"; sourceTree = "<group>"; };
+		B6C55EB17718905E65E47B7E /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorFade.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorFade.h; sourceTree = "<group>"; };
+		B7F8C4F09D730629440BEF0E /* SlideNavigationContorllerAnimatorScaleAndFade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorScaleAndFade.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorScaleAndFade.h; sourceTree = "<group>"; };
+		BE810551CFF0A9C26598350A /* libPods-TLTalk-DropdownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk-DropdownMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C227E4F2DDA4F364766E915F /* SWFrameButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWFrameButton.m; path = SWFrameButton/SWFrameButton.m; sourceTree = "<group>"; };
+		C325ABDCF7FD519E1CC731CA /* Pods-TLTalk-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTalk-environment.h"; sourceTree = "<group>"; };
+		C508EFA25C4857D333AA8F24 /* libPods-TLTalk-SWFrameButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk-SWFrameButton.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA5525B1F3E4B547ACD6DF7E /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimator.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
+		CC84BCBFB5A0FDF65AA61678 /* libPods-TLTalk-BDKNotifyHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk-BDKNotifyHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCFF8246613CEA5D5AFA4CBF /* FAKZocial.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKZocial.m; path = FontAwesomeKit/FAKZocial.m; sourceTree = "<group>"; };
+		CEA90289BF8FFD3DFB56ADBF /* Pods-TLTalk-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLTalk-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CEBFCDEAC0FF55218A388465 /* Pods-TLTalk-EAIntroView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-EAIntroView-Private.xcconfig"; sourceTree = "<group>"; };
+		CF07436CF0D05764ACE73594 /* BButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BButton.h; path = BButton/Classes/BButton.h; sourceTree = "<group>"; };
+		D28658459FA5EC8D6DF17394 /* foundation-icons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "foundation-icons.ttf"; path = "FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
+		D3C9B870BA9F1E17F248CB77 /* FAKIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIcon.m; path = FontAwesomeKit/FAKIcon.m; sourceTree = "<group>"; };
+		D811C6599D32062C12CD4B9F /* Pods-TLTalk-iOS-Slide-Menu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-iOS-Slide-Menu.xcconfig"; sourceTree = "<group>"; };
+		D8A9532D28AF795A67F03D5B /* libPods-TLTalk-FontAwesomeKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk-FontAwesomeKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0266D4030B70BA8455F274 /* Pods-TLTalk-DropdownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-DropdownMenu.xcconfig"; sourceTree = "<group>"; };
+		DB50EB320A30324BAD49D0C9 /* Pods-TLTalk-BDKNotifyHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTalk-BDKNotifyHUD-dummy.m"; sourceTree = "<group>"; };
+		DED134E95D6E79899143895A /* SWFrameButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWFrameButton.h; path = SWFrameButton/SWFrameButton.h; sourceTree = "<group>"; };
+		E0FDE93506DF0C079B9103AF /* Pods-TLTalk-BDKNotifyHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTalk-BDKNotifyHUD-prefix.pch"; sourceTree = "<group>"; };
+		E11D8C24528B89E3C9F2C337 /* Pods-TLTalk-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TLTalk-resources.sh"; sourceTree = "<group>"; };
+		E300FDAD7AF23E85014301E1 /* FAKFontAwesome.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFontAwesome.m; path = FontAwesomeKit/FAKFontAwesome.m; sourceTree = "<group>"; };
+		E5A3D5F7B22343EC2B45A6E0 /* Pods-TLTalk-iOS-Slide-Menu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTalk-iOS-Slide-Menu-prefix.pch"; sourceTree = "<group>"; };
+		E63BAA993A8F4470510A0C69 /* Pods-TLTalk-SWFrameButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-SWFrameButton.xcconfig"; sourceTree = "<group>"; };
+		E8432C7BDCC8973E968F553D /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E973619AEB9B4CAAEFADB417 /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "zocial-regular-webfont.ttf"; path = "FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
+		E9FE669DE487283B4C5C10A4 /* Pods-TLTalk-iOS-Slide-Menu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTalk-iOS-Slide-Menu-dummy.m"; sourceTree = "<group>"; };
+		EB968F0D74211A9E54164763 /* Pods-TLTalk-FontAwesomeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTalk-FontAwesomeKit.xcconfig"; sourceTree = "<group>"; };
+		ECB14D8D0040A1BFD387FEDD /* DropdownMenuController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DropdownMenuController.h; path = DropdownMenu/DropdownMenuController.h; sourceTree = "<group>"; };
+		F94B8738C5D0445DD078DF24 /* EARestrictedScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EARestrictedScrollView.m; path = EARestrictedScrollView/EARestrictedScrollView.m; sourceTree = "<group>"; };
+		FA19F5544D487980440760EA /* UIColor+BButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BButton.m"; path = "BButton/Classes/UIColor+BButton.m"; sourceTree = "<group>"; };
+		FB9C90B1AD6F3B4F9B3A21A1 /* Pods-TLTalk-BButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTalk-BButton-prefix.pch"; sourceTree = "<group>"; };
+		FC61FBF019E7EB9A632C35B7 /* Pods-TLTalk-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTalk-acknowledgements.plist"; sourceTree = "<group>"; };
+		FC999C20911B2A64189B3328 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FCEB179389790CE474C958CA /* Pods-TLTalk-FontAwesomeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTalk-FontAwesomeKit-prefix.pch"; sourceTree = "<group>"; };
+		FD6A73F4639DBD840C312A3B /* Pods-TLTalk-SWFrameButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTalk-SWFrameButton-dummy.m"; sourceTree = "<group>"; };
+		FD99C1BC0BC63F04B677141A /* FAKFoundationIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFoundationIcons.h; path = FontAwesomeKit/FAKFoundationIcons.h; sourceTree = "<group>"; };
+		FE485C045524D18E35A51E23 /* UIColor+BButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+BButton.h"; path = "BButton/Classes/UIColor+BButton.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		063B160B98B81383C9A41829 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB7DB95C00A44AEFD1ED708 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10AD3BB3AE8F90F1E9F83F69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CFB8D05A4297D2716D889CC /* CoreGraphics.framework in Frameworks */,
+				74A0B238126D58DC23A57598 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11A0EA69E45DA991BF1FCC7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517A73D427ED0FD7D3B7BB46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21C2120851A477F3F72EEEE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C15FB39D3B8BA18A3924E1D7 /* Foundation.framework in Frameworks */,
+				2FFFB8B2ECA960D47780E8FE /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27CBD1B209BB56FB61E3E1E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4CA28E8024A6FF2594BC66 /* Foundation.framework in Frameworks */,
+				C47034AE35908B18209D12A5 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		291FF852B8F2599DAAC47686 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1CC08DDF8429DCE497F7410 /* Foundation.framework in Frameworks */,
+				253BBA9106169268462685C9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6512E7825600EDA73EF4B049 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B0E4456D62771113A6100A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		681307A970682C7B2D8E8AFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE596C4A10086AD3BE4F3544 /* CoreText.framework in Frameworks */,
+				FB8DD384029DE3224876A2C9 /* Foundation.framework in Frameworks */,
+				9ACCE9D2B5ACA7747478FB50 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C55816AAFC67B7F2D66E74A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE76E9430C005F2EC5ACBF7D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8774000F72EFDB26B1E7993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78DD32B36753A9FB3B6F3A7A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03325C2145E5949382901700 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				45DC07FCCF59BCE229690239 /* Pods-TLTalk-BButton.xcconfig */,
+				6BAC7B613F66EF61317FEE06 /* Pods-TLTalk-BButton-Private.xcconfig */,
+				023449C88B55ABE45888C9B4 /* Pods-TLTalk-BButton-dummy.m */,
+				FB9C90B1AD6F3B4F9B3A21A1 /* Pods-TLTalk-BButton-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TLTalk-BButton";
+			sourceTree = "<group>";
+		};
+		07A3A7006FC646A6ED3C6C28 /* Zocial */ = {
+			isa = PBXGroup;
+			children = (
+				83E9E99EF0F8FFB4E983A95E /* FAKZocial.h */,
+				CCFF8246613CEA5D5AFA4CBF /* FAKZocial.m */,
+				BF81E78314FEE5E79AC03DA8 /* Resources */,
+			);
+			name = Zocial;
+			sourceTree = "<group>";
+		};
+		14D5B1EFF869A64F6BF5ED52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				20D770B3178BD81AAA25E0B9 /* FontAwesome.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		171CFDA44CE53AA5C6709CFF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D7EDA547053772D328735C7 /* Pods-TLTalk-BDKNotifyHUD.xcconfig */,
+				03297FD9CFD8DB5B94EA7542 /* Pods-TLTalk-BDKNotifyHUD-Private.xcconfig */,
+				DB50EB320A30324BAD49D0C9 /* Pods-TLTalk-BDKNotifyHUD-dummy.m */,
+				E0FDE93506DF0C079B9103AF /* Pods-TLTalk-BDKNotifyHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TLTalk-BDKNotifyHUD";
+			sourceTree = "<group>";
+		};
+		199F1D7D755FFA332297C40A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41C9F1D35A4AC3EC7DBE121B /* Pods-TLTalk-EARestrictedScrollView.xcconfig */,
+				A218ED24F2C6559D4D7A87AC /* Pods-TLTalk-EARestrictedScrollView-Private.xcconfig */,
+				20C36AC662AA8E0A95A1D1A7 /* Pods-TLTalk-EARestrictedScrollView-dummy.m */,
+				6B3922351D5D976FB4E50970 /* Pods-TLTalk-EARestrictedScrollView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TLTalk-EARestrictedScrollView";
+			sourceTree = "<group>";
+		};
+		1F8AF54F72E1A8B6A784E9CD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				84370A6DF84205D699D0B966 /* Pods-TLTalk-EAIntroView.xcconfig */,
+				CEBFCDEAC0FF55218A388465 /* Pods-TLTalk-EAIntroView-Private.xcconfig */,
+				1A6D1144B0E5612AB014CD6C /* Pods-TLTalk-EAIntroView-dummy.m */,
+				714E9F72333367280EADBE0E /* Pods-TLTalk-EAIntroView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TLTalk-EAIntroView";
+			sourceTree = "<group>";
+		};
+		258C6ADB5CF7AC7F2D42074E /* BButton */ = {
+			isa = PBXGroup;
+			children = (
+				CF07436CF0D05764ACE73594 /* BButton.h */,
+				49EB36171FFE5CECBBA86725 /* BButton.m */,
+				0D50DC1C5D3ADE4DF083FEF0 /* NSString+FontAwesome.h */,
+				4B785B0661FF3A292AE84A2C /* NSString+FontAwesome.m */,
+				FE485C045524D18E35A51E23 /* UIColor+BButton.h */,
+				FA19F5544D487980440760EA /* UIColor+BButton.m */,
+				14D5B1EFF869A64F6BF5ED52 /* Resources */,
+				03325C2145E5949382901700 /* Support Files */,
+			);
+			path = BButton;
+			sourceTree = "<group>";
+		};
+		34C3967144F9152A8019A6FB /* iOS-Slide-Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CA5525B1F3E4B547ACD6DF7E /* SlideNavigationContorllerAnimator.h */,
+				B6C55EB17718905E65E47B7E /* SlideNavigationContorllerAnimatorFade.h */,
+				1B7675DB01231893EE1B7E5B /* SlideNavigationContorllerAnimatorFade.m */,
+				4E36A0397A6FEE74071C67A1 /* SlideNavigationContorllerAnimatorScale.h */,
+				A71262E6C7A61CC4CD39CE6D /* SlideNavigationContorllerAnimatorScale.m */,
+				B7F8C4F09D730629440BEF0E /* SlideNavigationContorllerAnimatorScaleAndFade.h */,
+				A1AF74E92349AB6191C2766C /* SlideNavigationContorllerAnimatorScaleAndFade.m */,
+				48C2C9648CBB6FB279C4D4BC /* SlideNavigationContorllerAnimatorSlide.h */,
+				92EBCE4274DB87E1B272CEB7 /* SlideNavigationContorllerAnimatorSlide.m */,
+				A865BE7E08BCF8E3D01E838A /* SlideNavigationContorllerAnimatorSlideAndFade.h */,
+				35713D494591F55D30F9403A /* SlideNavigationContorllerAnimatorSlideAndFade.m */,
+				01BA07531EA73D36E166C48B /* SlideNavigationController.h */,
+				6D18974B29BCD02A1A9A1FD1 /* SlideNavigationController.m */,
+				58B1FD62A4A4FB0F3CDFE1B1 /* Resources */,
+				6DAF8CBD4F5A61E284D42B91 /* Support Files */,
+			);
+			path = "iOS-Slide-Menu";
+			sourceTree = "<group>";
+		};
+		34C6BCE19507F80A0E005A4B /* FoundationIcons */ = {
+			isa = PBXGroup;
+			children = (
+				FD99C1BC0BC63F04B677141A /* FAKFoundationIcons.h */,
+				A37B8E5B69FFA477E2545424 /* FAKFoundationIcons.m */,
+				AA8BE32BB02634DC64B155DB /* Resources */,
+			);
+			name = FoundationIcons;
+			sourceTree = "<group>";
+		};
+		3876EC80BE87A77AFFB9A715 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				882868FBC5BC5390036409CB /* Pods-TLTalk-SMPageControl.xcconfig */,
+				7A68BD14823CB0EA9CE1BB02 /* Pods-TLTalk-SMPageControl-Private.xcconfig */,
+				95FCD84B1E6FEF0D13379074 /* Pods-TLTalk-SMPageControl-dummy.m */,
+				87A48F78867AA1AFCDD78718 /* Pods-TLTalk-SMPageControl-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TLTalk-SMPageControl";
+			sourceTree = "<group>";
+		};
+		417D8094A1FCBF5F90F6C72C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				45DEFB7205660ED2936AD920 /* Pods-TLTalk */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		45DEFB7205660ED2936AD920 /* Pods-TLTalk */ = {
+			isa = PBXGroup;
+			children = (
+				CEA90289BF8FFD3DFB56ADBF /* Pods-TLTalk-acknowledgements.markdown */,
+				FC61FBF019E7EB9A632C35B7 /* Pods-TLTalk-acknowledgements.plist */,
+				051D1EA1A6B44892282A82F8 /* Pods-TLTalk-dummy.m */,
+				C325ABDCF7FD519E1CC731CA /* Pods-TLTalk-environment.h */,
+				E11D8C24528B89E3C9F2C337 /* Pods-TLTalk-resources.sh */,
+				6144A807F68F7FF6F2201D47 /* Pods-TLTalk.debug.xcconfig */,
+				0C381F813318B5D64AED7582 /* Pods-TLTalk.release.xcconfig */,
+			);
+			name = "Pods-TLTalk";
+			path = "Target Support Files/Pods-TLTalk";
+			sourceTree = "<group>";
+		};
+		47F3394EA30C455A5B80E361 /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				715C15B9E2B939F11D20C8A9 /* FAKFontAwesome.h */,
+				E300FDAD7AF23E85014301E1 /* FAKFontAwesome.m */,
+				6BF7D46471A84197E3855E76 /* Resources */,
+			);
+			name = FontAwesome;
+			sourceTree = "<group>";
+		};
+		484439C939F9AA8C79116BAD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				480FB37E9D3247EC6D53E5DB /* ionicons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		58B1FD62A4A4FB0F3CDFE1B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9DB172461306D3C96A7F651F /* menu-button.png */,
+				6E6B653DA8B5BAF7CFE4E444 /* menu-button@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		62DE1225143FB7BA548EC8CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB0266D4030B70BA8455F274 /* Pods-TLTalk-DropdownMenu.xcconfig */,
+				19EE675B3931CB75DEF66AA7 /* Pods-TLTalk-DropdownMenu-Private.xcconfig */,
+				6D0F4D3914E409890C0C2542 /* Pods-TLTalk-DropdownMenu-dummy.m */,
+				726259026F9D4C87AED72B98 /* Pods-TLTalk-DropdownMenu-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TLTalk-DropdownMenu";
+			sourceTree = "<group>";
+		};
+		69CA8CFE02EB386220A9ED17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98BD7B752E2E706B1C6DE28F /* libPods-TLTalk.a */,
+				1DD48323458C50FE3EEBF24C /* libPods-TLTalk-BButton.a */,
+				CC84BCBFB5A0FDF65AA61678 /* libPods-TLTalk-BDKNotifyHUD.a */,
+				BE810551CFF0A9C26598350A /* libPods-TLTalk-DropdownMenu.a */,
+				42AA6840B58FA9D2BFAA1561 /* libPods-TLTalk-EAIntroView.a */,
+				AA3015E1CDB47D8241C9B19C /* libPods-TLTalk-EARestrictedScrollView.a */,
+				D8A9532D28AF795A67F03D5B /* libPods-TLTalk-FontAwesomeKit.a */,
+				10EFA8CF4AE81B145029EF96 /* libPods-TLTalk-SMPageControl.a */,
+				C508EFA25C4857D333AA8F24 /* libPods-TLTalk-SWFrameButton.a */,
+				A77D7F7426FE4296DDCDE6DE /* libPods-TLTalk-iOS-Slide-Menu.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BB43F8961C5FC1D08523265 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				258C6ADB5CF7AC7F2D42074E /* BButton */,
+				F91BD03966159D92B2C3C3AF /* BDKNotifyHUD */,
+				FB66CD386225013B47401B32 /* DropdownMenu */,
+				BD81840C21A356F742389E92 /* EAIntroView */,
+				88E749753B81E05705B45956 /* EARestrictedScrollView */,
+				A684CBA05FA780E5BE57B52A /* FontAwesomeKit */,
+				70684486A13F31373BB89634 /* SMPageControl */,
+				DB080942E4151E78CA50E160 /* SWFrameButton */,
+				34C3967144F9152A8019A6FB /* iOS-Slide-Menu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6BF7D46471A84197E3855E76 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A119AA08DA08C5E46E9EB5C8 /* FontAwesome.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6DAF8CBD4F5A61E284D42B91 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D811C6599D32062C12CD4B9F /* Pods-TLTalk-iOS-Slide-Menu.xcconfig */,
+				B467CD3071E822FAF7F6F941 /* Pods-TLTalk-iOS-Slide-Menu-Private.xcconfig */,
+				E9FE669DE487283B4C5C10A4 /* Pods-TLTalk-iOS-Slide-Menu-dummy.m */,
+				E5A3D5F7B22343EC2B45A6E0 /* Pods-TLTalk-iOS-Slide-Menu-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TLTalk-iOS-Slide-Menu";
+			sourceTree = "<group>";
+		};
+		6F035837E6B955D1BA20E4FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6473C8F43470A0986B8473F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70684486A13F31373BB89634 /* SMPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				8D1E94E2150D5A34527274F6 /* SMPageControl.h */,
+				7DC13BE2FB8850A956FCBC1C /* SMPageControl.m */,
+				3876EC80BE87A77AFFB9A715 /* Support Files */,
+			);
+			path = SMPageControl;
+			sourceTree = "<group>";
+		};
+		732F10EBD36D3D1C5DC70AC3 /* IonIcons */ = {
+			isa = PBXGroup;
+			children = (
+				4A2D98E1F7215D389F9ECFD7 /* FAKIonIcons.h */,
+				02BBB1D941C3704F790F9E0B /* FAKIonIcons.m */,
+				484439C939F9AA8C79116BAD /* Resources */,
+			);
+			name = IonIcons;
+			sourceTree = "<group>";
+		};
+		736838D918FC603C86E6CB88 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB968F0D74211A9E54164763 /* Pods-TLTalk-FontAwesomeKit.xcconfig */,
+				7382561698FD8EC5073F2FF0 /* Pods-TLTalk-FontAwesomeKit-Private.xcconfig */,
+				8F3CE73362B7BC7E29F7481F /* Pods-TLTalk-FontAwesomeKit-dummy.m */,
+				FCEB179389790CE474C958CA /* Pods-TLTalk-FontAwesomeKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TLTalk-FontAwesomeKit";
+			sourceTree = "<group>";
+		};
+		73BD5D9D2A25CDC5FA330FF0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				81A592A314FD743ED7B6CFF5 /* FAKIcon.h */,
+				D3C9B870BA9F1E17F248CB77 /* FAKIcon.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		88E749753B81E05705B45956 /* EARestrictedScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				4B6E75491DED4DB35281BD9E /* EARestrictedScrollView.h */,
+				F94B8738C5D0445DD078DF24 /* EARestrictedScrollView.m */,
+				199F1D7D755FFA332297C40A /* Support Files */,
+			);
+			path = EARestrictedScrollView;
+			sourceTree = "<group>";
+		};
+		9B4ED0CEC78C4CE57D4A1183 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E63BAA993A8F4470510A0C69 /* Pods-TLTalk-SWFrameButton.xcconfig */,
+				2439829780D691E498FCFFE2 /* Pods-TLTalk-SWFrameButton-Private.xcconfig */,
+				FD6A73F4639DBD840C312A3B /* Pods-TLTalk-SWFrameButton-dummy.m */,
+				9FE524EB8F75774AEF1BECFF /* Pods-TLTalk-SWFrameButton-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TLTalk-SWFrameButton";
+			sourceTree = "<group>";
+		};
+		A684CBA05FA780E5BE57B52A /* FontAwesomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				1D3237821A270AFA36976462 /* FontAwesomeKit.h */,
+				73BD5D9D2A25CDC5FA330FF0 /* Core */,
+				47F3394EA30C455A5B80E361 /* FontAwesome */,
+				34C6BCE19507F80A0E005A4B /* FoundationIcons */,
+				732F10EBD36D3D1C5DC70AC3 /* IonIcons */,
+				736838D918FC603C86E6CB88 /* Support Files */,
+				07A3A7006FC646A6ED3C6C28 /* Zocial */,
+			);
+			path = FontAwesomeKit;
+			sourceTree = "<group>";
+		};
+		AA8BE32BB02634DC64B155DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D28658459FA5EC8D6DF17394 /* foundation-icons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BD81840C21A356F742389E92 /* EAIntroView */ = {
+			isa = PBXGroup;
+			children = (
+				2DA850F25B8DE03993772468 /* EAIntroPage.h */,
+				75A99DB6B91438B2ED70F656 /* EAIntroPage.m */,
+				2D2A61A93418901BEE49368C /* EAIntroView.h */,
+				6EE5E0913D1247C8CFE8A559 /* EAIntroView.m */,
+				1F8AF54F72E1A8B6A784E9CD /* Support Files */,
+			);
+			path = EAIntroView;
+			sourceTree = "<group>";
+		};
+		BF81E78314FEE5E79AC03DA8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E973619AEB9B4CAAEFADB417 /* zocial-regular-webfont.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C8B591505028301F156891B8 = {
+			isa = PBXGroup;
+			children = (
+				E8432C7BDCC8973E968F553D /* Podfile */,
+				6F035837E6B955D1BA20E4FF /* Frameworks */,
+				6BB43F8961C5FC1D08523265 /* Pods */,
+				69CA8CFE02EB386220A9ED17 /* Products */,
+				417D8094A1FCBF5F90F6C72C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DB080942E4151E78CA50E160 /* SWFrameButton */ = {
+			isa = PBXGroup;
+			children = (
+				DED134E95D6E79899143895A /* SWFrameButton.h */,
+				C227E4F2DDA4F364766E915F /* SWFrameButton.m */,
+				9B4ED0CEC78C4CE57D4A1183 /* Support Files */,
+			);
+			path = SWFrameButton;
+			sourceTree = "<group>";
+		};
+		F6473C8F43470A0986B8473F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0FAEDD8E226118D9EF165CE9 /* CoreGraphics.framework */,
+				27C0D18AADB6F69DFBFF5578 /* CoreText.framework */,
+				FC999C20911B2A64189B3328 /* Foundation.framework */,
+				3799DECBF7A900B34E156970 /* QuartzCore.framework */,
+				985A4A6096FCD7AFAA6E91E4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F91BD03966159D92B2C3C3AF /* BDKNotifyHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2520534435DCCFBCEE8AAB7D /* BDKNotifyHUD.h */,
+				9CB0BEB2F55975A216DD2B8D /* BDKNotifyHUD.m */,
+				171CFDA44CE53AA5C6709CFF /* Support Files */,
+			);
+			path = BDKNotifyHUD;
+			sourceTree = "<group>";
+		};
+		FB66CD386225013B47401B32 /* DropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				ECB14D8D0040A1BFD387FEDD /* DropdownMenuController.h */,
+				46E1CF0EAED1BD40A8F6967F /* DropdownMenuController.m */,
+				42E1E19E40EAAC5623C1C62E /* DropdownMenuSegue.h */,
+				32C64D15B18192F78C27CBE2 /* DropdownMenuSegue.m */,
+				62DE1225143FB7BA548EC8CE /* Support Files */,
+			);
+			path = DropdownMenu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		48C31FB1BAA2607C7242F119 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BFDB8E45E20A69C8B039C55 /* BButton.h in Headers */,
+				186C0E04123C3DF023AB077A /* NSString+FontAwesome.h in Headers */,
+				9B1E0A1D798CB2D4B26A3A70 /* UIColor+BButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB776D3A269B4B4920D8C0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFB2EFBADFBE225B5532DBF4 /* SMPageControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DE10637B72AE9825C9001AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D445DA6441E525D203EDAACF /* BDKNotifyHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FD8991E5807C7DDABBE7FAA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20D9AB0C4E04832C91D28077 /* SlideNavigationContorllerAnimator.h in Headers */,
+				6A63B30ADFF8909FF324C929 /* SlideNavigationContorllerAnimatorFade.h in Headers */,
+				65B2FCB0C49C8AFE2410845B /* SlideNavigationContorllerAnimatorScale.h in Headers */,
+				3FF2A6ED3126E41F5CA288ED /* SlideNavigationContorllerAnimatorScaleAndFade.h in Headers */,
+				02AA71DF10C4B702F0B5B027 /* SlideNavigationContorllerAnimatorSlide.h in Headers */,
+				E6DCFC64003111ADB53FDDFD /* SlideNavigationContorllerAnimatorSlideAndFade.h in Headers */,
+				E211E80504D8D2927F672176 /* SlideNavigationController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		939405D8AF3962826BD1422C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61741D39E6E356B1B15D318 /* EAIntroPage.h in Headers */,
+				48E63B9D234098CEA2C1AE78 /* EAIntroView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DEB5559D29E59B07A7C1742 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A948457560D8DDCE7B614B9 /* SWFrameButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B18C0833E3C666C87CA5CA1F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F67C537169766F5DE16BFCFB /* DropdownMenuController.h in Headers */,
+				7B80AD6BF2DEA33F6E8FEF11 /* DropdownMenuSegue.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6C81D269980D8AB7D1E0343 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42919FE7D69A61E3C14A6E5C /* EARestrictedScrollView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D70839E194ACA8C1AA249F13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C37B9073FE567A78186E888 /* FAKFontAwesome.h in Headers */,
+				8DF958084FCB365A3F28C007 /* FAKFoundationIcons.h in Headers */,
+				90BE27414D3E345332917F2B /* FAKIcon.h in Headers */,
+				5A4D86F8351F12D7DFDEBE02 /* FAKIonIcons.h in Headers */,
+				915A0448A2FED42575D6DB04 /* FAKZocial.h in Headers */,
+				97D18DEBDD4AF32C8E0AF62D /* FontAwesomeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		03CCA790C463BFBF05863840 /* Pods-TLTalk-EAIntroView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06E88B1D3EC368CAC4C82507 /* Build configuration list for PBXNativeTarget "Pods-TLTalk-EAIntroView" */;
+			buildPhases = (
+				F904632E0A2FD3E6BBAE47DB /* Sources */,
+				C55816AAFC67B7F2D66E74A5 /* Frameworks */,
+				939405D8AF3962826BD1422C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A6830B6806CD87D27055FB8 /* PBXTargetDependency */,
+			);
+			name = "Pods-TLTalk-EAIntroView";
+			productName = "Pods-TLTalk-EAIntroView";
+			productReference = 42AA6840B58FA9D2BFAA1561 /* libPods-TLTalk-EAIntroView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		075984A4AD6467586E1714C7 /* Pods-TLTalk-BButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC338F42489E6608E4FB3A2 /* Build configuration list for PBXNativeTarget "Pods-TLTalk-BButton" */;
+			buildPhases = (
+				52323433BE2AB5BA1F50449E /* Sources */,
+				10AD3BB3AE8F90F1E9F83F69 /* Frameworks */,
+				48C31FB1BAA2607C7242F119 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TLTalk-BButton";
+			productName = "Pods-TLTalk-BButton";
+			productReference = 1DD48323458C50FE3EEBF24C /* libPods-TLTalk-BButton.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		176C6B61F89BB54209AED009 /* Pods-TLTalk-BDKNotifyHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF489AECAD034C9D9723685D /* Build configuration list for PBXNativeTarget "Pods-TLTalk-BDKNotifyHUD" */;
+			buildPhases = (
+				82FF7CF639890D3983FBFAA1 /* Sources */,
+				27CBD1B209BB56FB61E3E1E3 /* Frameworks */,
+				7DE10637B72AE9825C9001AF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TLTalk-BDKNotifyHUD";
+			productName = "Pods-TLTalk-BDKNotifyHUD";
+			productReference = CC84BCBFB5A0FDF65AA61678 /* libPods-TLTalk-BDKNotifyHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		41D6858B3C27C91749CC3E6F /* Pods-TLTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F0A915348D91A43B0C800A /* Build configuration list for PBXNativeTarget "Pods-TLTalk" */;
+			buildPhases = (
+				6B38DDC5256E0BD6ACE45B1A /* Sources */,
+				063B160B98B81383C9A41829 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A46B865C53C68FE948017A21 /* PBXTargetDependency */,
+				3A145B9DBEAD533F840A6B08 /* PBXTargetDependency */,
+				F3E01E036660B0EC0E6AD478 /* PBXTargetDependency */,
+				1FDA8DC37808209DF863EE73 /* PBXTargetDependency */,
+				882953BAA59EF9182C8DEF47 /* PBXTargetDependency */,
+				63D33E88413041B283638B45 /* PBXTargetDependency */,
+				8F48C0F3AA81FF9E2D583AF0 /* PBXTargetDependency */,
+				2E2BD77761C2B7D780A2FB01 /* PBXTargetDependency */,
+				A4D891C98B1460F34E381695 /* PBXTargetDependency */,
+			);
+			name = "Pods-TLTalk";
+			productName = "Pods-TLTalk";
+			productReference = 98BD7B752E2E706B1C6DE28F /* libPods-TLTalk.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4F98DED46D18384A4FF1EA4A /* Pods-TLTalk-iOS-Slide-Menu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A81609478D0A6EFE64E56BA /* Build configuration list for PBXNativeTarget "Pods-TLTalk-iOS-Slide-Menu" */;
+			buildPhases = (
+				11F793860240146D91D3794B /* Sources */,
+				291FF852B8F2599DAAC47686 /* Frameworks */,
+				8FD8991E5807C7DDABBE7FAA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TLTalk-iOS-Slide-Menu";
+			productName = "Pods-TLTalk-iOS-Slide-Menu";
+			productReference = A77D7F7426FE4296DDCDE6DE /* libPods-TLTalk-iOS-Slide-Menu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		649A40BF7CD93034357DE15C /* Pods-TLTalk-SMPageControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63260C7B2BD0ACA4C64A1BEF /* Build configuration list for PBXNativeTarget "Pods-TLTalk-SMPageControl" */;
+			buildPhases = (
+				83BA3FE575A99F17EDAC674B /* Sources */,
+				11A0EA69E45DA991BF1FCC7D /* Frameworks */,
+				4EB776D3A269B4B4920D8C0F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TLTalk-SMPageControl";
+			productName = "Pods-TLTalk-SMPageControl";
+			productReference = 10EFA8CF4AE81B145029EF96 /* libPods-TLTalk-SMPageControl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6D1634B35484FD2260484733 /* Pods-TLTalk-FontAwesomeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 255A714B28E64F54C927279E /* Build configuration list for PBXNativeTarget "Pods-TLTalk-FontAwesomeKit" */;
+			buildPhases = (
+				B8C112A6FD1B8F174D6815A1 /* Sources */,
+				681307A970682C7B2D8E8AFF /* Frameworks */,
+				D70839E194ACA8C1AA249F13 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TLTalk-FontAwesomeKit";
+			productName = "Pods-TLTalk-FontAwesomeKit";
+			productReference = D8A9532D28AF795A67F03D5B /* libPods-TLTalk-FontAwesomeKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		79758195817E470C320ADCC0 /* Pods-TLTalk-DropdownMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B7E2EEB96F3ECF710ADAF51 /* Build configuration list for PBXNativeTarget "Pods-TLTalk-DropdownMenu" */;
+			buildPhases = (
+				AF74C5897C5279E22F4C5D18 /* Sources */,
+				E8774000F72EFDB26B1E7993 /* Frameworks */,
+				B18C0833E3C666C87CA5CA1F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TLTalk-DropdownMenu";
+			productName = "Pods-TLTalk-DropdownMenu";
+			productReference = BE810551CFF0A9C26598350A /* libPods-TLTalk-DropdownMenu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DAA3DB0D164D30F260A63944 /* Pods-TLTalk-EARestrictedScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31F2554DD9BD79B580C5C0E9 /* Build configuration list for PBXNativeTarget "Pods-TLTalk-EARestrictedScrollView" */;
+			buildPhases = (
+				C8772D58B26AEB6FCE0B97CB /* Sources */,
+				6512E7825600EDA73EF4B049 /* Frameworks */,
+				D6C81D269980D8AB7D1E0343 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TLTalk-EARestrictedScrollView";
+			productName = "Pods-TLTalk-EARestrictedScrollView";
+			productReference = AA3015E1CDB47D8241C9B19C /* libPods-TLTalk-EARestrictedScrollView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EA976A597A36EF17983B1335 /* Pods-TLTalk-SWFrameButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F90FA226604021ED7BEB70E /* Build configuration list for PBXNativeTarget "Pods-TLTalk-SWFrameButton" */;
+			buildPhases = (
+				C5FF16BE9C562571E1E542A9 /* Sources */,
+				21C2120851A477F3F72EEEE5 /* Frameworks */,
+				9DEB5559D29E59B07A7C1742 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TLTalk-SWFrameButton";
+			productName = "Pods-TLTalk-SWFrameButton";
+			productReference = C508EFA25C4857D333AA8F24 /* libPods-TLTalk-SWFrameButton.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50947CB94CCEE0D9D4E4E781 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = FA98EDEA3B3CD43CFD1A3343 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C8B591505028301F156891B8;
+			productRefGroup = 69CA8CFE02EB386220A9ED17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41D6858B3C27C91749CC3E6F /* Pods-TLTalk */,
+				075984A4AD6467586E1714C7 /* Pods-TLTalk-BButton */,
+				176C6B61F89BB54209AED009 /* Pods-TLTalk-BDKNotifyHUD */,
+				79758195817E470C320ADCC0 /* Pods-TLTalk-DropdownMenu */,
+				03CCA790C463BFBF05863840 /* Pods-TLTalk-EAIntroView */,
+				DAA3DB0D164D30F260A63944 /* Pods-TLTalk-EARestrictedScrollView */,
+				6D1634B35484FD2260484733 /* Pods-TLTalk-FontAwesomeKit */,
+				649A40BF7CD93034357DE15C /* Pods-TLTalk-SMPageControl */,
+				EA976A597A36EF17983B1335 /* Pods-TLTalk-SWFrameButton */,
+				4F98DED46D18384A4FF1EA4A /* Pods-TLTalk-iOS-Slide-Menu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11F793860240146D91D3794B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				577733337CCDA626617FBD07 /* Pods-TLTalk-iOS-Slide-Menu-dummy.m in Sources */,
+				36E516D37E98BF8F91F07C43 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
+				C3040491A91DE25EDA51E77C /* SlideNavigationContorllerAnimatorScale.m in Sources */,
+				46A03843252DE1CB14C79C73 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
+				2E30DCC48B8876C0015E4B5B /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
+				7918D198EDE71BD20FD182EB /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				D87BC24E703699F376CFDA1E /* SlideNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52323433BE2AB5BA1F50449E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66950421DAB28486B7B408D /* BButton.m in Sources */,
+				E49C0D2F01702CE2F3CAEC50 /* NSString+FontAwesome.m in Sources */,
+				EE7F26CFFCC8871940D16692 /* Pods-TLTalk-BButton-dummy.m in Sources */,
+				6F59191A6CC2AF0712BEBCD7 /* UIColor+BButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B38DDC5256E0BD6ACE45B1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8211D9BB9FA8EA830D90620 /* Pods-TLTalk-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82FF7CF639890D3983FBFAA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F3FC33B0ADF15E66D7D9FA1 /* BDKNotifyHUD.m in Sources */,
+				081FCFE7FD22CEB39884B7FF /* Pods-TLTalk-BDKNotifyHUD-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83BA3FE575A99F17EDAC674B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28029C70BE96E83CCBDB2817 /* Pods-TLTalk-SMPageControl-dummy.m in Sources */,
+				CEC908C1D5382F16C6DB4083 /* SMPageControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF74C5897C5279E22F4C5D18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A24381B925A7F72BBAE22771 /* DropdownMenuController.m in Sources */,
+				BB824DFAA1209520FB9DDF14 /* DropdownMenuSegue.m in Sources */,
+				153A173F451430DAEB8D0406 /* Pods-TLTalk-DropdownMenu-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C112A6FD1B8F174D6815A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB110D8E328D460F3B775381 /* FAKFontAwesome.m in Sources */,
+				5E66BFC716602DDDCD66EFD7 /* FAKFoundationIcons.m in Sources */,
+				93A80B69EB4F5AB8429C4C52 /* FAKIcon.m in Sources */,
+				6C3C62E545EC78F49452D8EE /* FAKIonIcons.m in Sources */,
+				535A02DF528AF792508694BD /* FAKZocial.m in Sources */,
+				4F089A2164AC17459D1E22DB /* Pods-TLTalk-FontAwesomeKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5FF16BE9C562571E1E542A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B14B6C840CE33D6C164E3D30 /* Pods-TLTalk-SWFrameButton-dummy.m in Sources */,
+				F30A57D9F82E822D3254C587 /* SWFrameButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8772D58B26AEB6FCE0B97CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC0544F91BB0BB1BC9771CEC /* EARestrictedScrollView.m in Sources */,
+				302D38C3C8DAAB8708D41D35 /* Pods-TLTalk-EARestrictedScrollView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F904632E0A2FD3E6BBAE47DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAECEE3FD7D45CAEA507BC53 /* EAIntroPage.m in Sources */,
+				BEA035F33FD1A1CFA2A29606 /* EAIntroView.m in Sources */,
+				4BD73B8B5D9C5DADC1595086 /* Pods-TLTalk-EAIntroView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FDA8DC37808209DF863EE73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTalk-EAIntroView";
+			target = 03CCA790C463BFBF05863840 /* Pods-TLTalk-EAIntroView */;
+			targetProxy = 902A8CF7551823B416DCCB5E /* PBXContainerItemProxy */;
+		};
+		2E2BD77761C2B7D780A2FB01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTalk-SWFrameButton";
+			target = EA976A597A36EF17983B1335 /* Pods-TLTalk-SWFrameButton */;
+			targetProxy = 5D25192A49F20E500E2AC07C /* PBXContainerItemProxy */;
+		};
+		3A145B9DBEAD533F840A6B08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTalk-BDKNotifyHUD";
+			target = 176C6B61F89BB54209AED009 /* Pods-TLTalk-BDKNotifyHUD */;
+			targetProxy = C29276F89BD36072D11FB97F /* PBXContainerItemProxy */;
+		};
+		5A6830B6806CD87D27055FB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTalk-EARestrictedScrollView";
+			target = DAA3DB0D164D30F260A63944 /* Pods-TLTalk-EARestrictedScrollView */;
+			targetProxy = D7177C2AB9FDBD327849CA1D /* PBXContainerItemProxy */;
+		};
+		63D33E88413041B283638B45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTalk-FontAwesomeKit";
+			target = 6D1634B35484FD2260484733 /* Pods-TLTalk-FontAwesomeKit */;
+			targetProxy = 92E7DB83FD4931C275AA2207 /* PBXContainerItemProxy */;
+		};
+		882953BAA59EF9182C8DEF47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTalk-EARestrictedScrollView";
+			target = DAA3DB0D164D30F260A63944 /* Pods-TLTalk-EARestrictedScrollView */;
+			targetProxy = 0E5BD7FAAA07C90CFA3C8279 /* PBXContainerItemProxy */;
+		};
+		8F48C0F3AA81FF9E2D583AF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTalk-SMPageControl";
+			target = 649A40BF7CD93034357DE15C /* Pods-TLTalk-SMPageControl */;
+			targetProxy = A55086BD0DF282C6D8EA013E /* PBXContainerItemProxy */;
+		};
+		A46B865C53C68FE948017A21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTalk-BButton";
+			target = 075984A4AD6467586E1714C7 /* Pods-TLTalk-BButton */;
+			targetProxy = 70389765A1DBD0FDBB3AD21B /* PBXContainerItemProxy */;
+		};
+		A4D891C98B1460F34E381695 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTalk-iOS-Slide-Menu";
+			target = 4F98DED46D18384A4FF1EA4A /* Pods-TLTalk-iOS-Slide-Menu */;
+			targetProxy = 44CEE7C8B4770C115547FD81 /* PBXContainerItemProxy */;
+		};
+		F3E01E036660B0EC0E6AD478 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTalk-DropdownMenu";
+			target = 79758195817E470C320ADCC0 /* Pods-TLTalk-DropdownMenu */;
+			targetProxy = 7D782C3D766EF9F23C523006 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		010F6D757AD3AF19D19C91AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BAC7B613F66EF61317FEE06 /* Pods-TLTalk-BButton-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-BButton/Pods-TLTalk-BButton-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0A62ACD69AED4502BD62760D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2439829780D691E498FCFFE2 /* Pods-TLTalk-SWFrameButton-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-SWFrameButton/Pods-TLTalk-SWFrameButton-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		214BD95B6C3DFC53EF1FAA08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A68BD14823CB0EA9CE1BB02 /* Pods-TLTalk-SMPageControl-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-SMPageControl/Pods-TLTalk-SMPageControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2A8E7C82DD776352A7F03E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19EE675B3931CB75DEF66AA7 /* Pods-TLTalk-DropdownMenu-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-DropdownMenu/Pods-TLTalk-DropdownMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		380C92B0970455EB20349D00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7382561698FD8EC5073F2FF0 /* Pods-TLTalk-FontAwesomeKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-FontAwesomeKit/Pods-TLTalk-FontAwesomeKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3C10DC8F013AB692A95873DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19EE675B3931CB75DEF66AA7 /* Pods-TLTalk-DropdownMenu-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-DropdownMenu/Pods-TLTalk-DropdownMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3E1A4B48430382731E632A5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B467CD3071E822FAF7F6F941 /* Pods-TLTalk-iOS-Slide-Menu-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-iOS-Slide-Menu/Pods-TLTalk-iOS-Slide-Menu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4133563D6841017E1BB5AA4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C381F813318B5D64AED7582 /* Pods-TLTalk.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		476FC48C473706C8217FE60E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEBFCDEAC0FF55218A388465 /* Pods-TLTalk-EAIntroView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-EAIntroView/Pods-TLTalk-EAIntroView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		70AC3FF41C7408F5BA0D2141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BAC7B613F66EF61317FEE06 /* Pods-TLTalk-BButton-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-BButton/Pods-TLTalk-BButton-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7D3279D696E473295F03DC33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03297FD9CFD8DB5B94EA7542 /* Pods-TLTalk-BDKNotifyHUD-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-BDKNotifyHUD/Pods-TLTalk-BDKNotifyHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		86BA7E4F5B2A6527FFF6CA49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2439829780D691E498FCFFE2 /* Pods-TLTalk-SWFrameButton-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-SWFrameButton/Pods-TLTalk-SWFrameButton-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		94D75C2A62F54611DF610878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03297FD9CFD8DB5B94EA7542 /* Pods-TLTalk-BDKNotifyHUD-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-BDKNotifyHUD/Pods-TLTalk-BDKNotifyHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9B3070A17903C5530D411D4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B467CD3071E822FAF7F6F941 /* Pods-TLTalk-iOS-Slide-Menu-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-iOS-Slide-Menu/Pods-TLTalk-iOS-Slide-Menu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A4F89BA478F4B00939FDFE16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6144A807F68F7FF6F2201D47 /* Pods-TLTalk.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A903D53694BC6F81F7A2AEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A68BD14823CB0EA9CE1BB02 /* Pods-TLTalk-SMPageControl-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-SMPageControl/Pods-TLTalk-SMPageControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BDC43E5184D79F6283DA8C16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEBFCDEAC0FF55218A388465 /* Pods-TLTalk-EAIntroView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-EAIntroView/Pods-TLTalk-EAIntroView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CEB407A348B897307DCE1FE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0B9CA8E5D69846FE04F44E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D23D592AFB5D2EA229ECE7A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A218ED24F2C6559D4D7A87AC /* Pods-TLTalk-EARestrictedScrollView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-EARestrictedScrollView/Pods-TLTalk-EARestrictedScrollView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EAB9A4853D0113EFEEF46DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7382561698FD8EC5073F2FF0 /* Pods-TLTalk-FontAwesomeKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-FontAwesomeKit/Pods-TLTalk-FontAwesomeKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FF1F0716EA3258B2CF611DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A218ED24F2C6559D4D7A87AC /* Pods-TLTalk-EARestrictedScrollView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TLTalk-EARestrictedScrollView/Pods-TLTalk-EARestrictedScrollView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06E88B1D3EC368CAC4C82507 /* Build configuration list for PBXNativeTarget "Pods-TLTalk-EAIntroView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				476FC48C473706C8217FE60E /* Debug */,
+				BDC43E5184D79F6283DA8C16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		255A714B28E64F54C927279E /* Build configuration list for PBXNativeTarget "Pods-TLTalk-FontAwesomeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAB9A4853D0113EFEEF46DED /* Debug */,
+				380C92B0970455EB20349D00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A81609478D0A6EFE64E56BA /* Build configuration list for PBXNativeTarget "Pods-TLTalk-iOS-Slide-Menu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B3070A17903C5530D411D4E /* Debug */,
+				3E1A4B48430382731E632A5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31F2554DD9BD79B580C5C0E9 /* Build configuration list for PBXNativeTarget "Pods-TLTalk-EARestrictedScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23D592AFB5D2EA229ECE7A6 /* Debug */,
+				FF1F0716EA3258B2CF611DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F90FA226604021ED7BEB70E /* Build configuration list for PBXNativeTarget "Pods-TLTalk-SWFrameButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A62ACD69AED4502BD62760D /* Debug */,
+				86BA7E4F5B2A6527FFF6CA49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC338F42489E6608E4FB3A2 /* Build configuration list for PBXNativeTarget "Pods-TLTalk-BButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70AC3FF41C7408F5BA0D2141 /* Debug */,
+				010F6D757AD3AF19D19C91AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63260C7B2BD0ACA4C64A1BEF /* Build configuration list for PBXNativeTarget "Pods-TLTalk-SMPageControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				214BD95B6C3DFC53EF1FAA08 /* Debug */,
+				A903D53694BC6F81F7A2AEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B7E2EEB96F3ECF710ADAF51 /* Build configuration list for PBXNativeTarget "Pods-TLTalk-DropdownMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C10DC8F013AB692A95873DD /* Debug */,
+				2A8E7C82DD776352A7F03E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F0A915348D91A43B0C800A /* Build configuration list for PBXNativeTarget "Pods-TLTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4F89BA478F4B00939FDFE16 /* Debug */,
+				4133563D6841017E1BB5AA4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA98EDEA3B3CD43CFD1A3343 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0B9CA8E5D69846FE04F44E1 /* Debug */,
+				CEB407A348B897307DCE1FE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF489AECAD034C9D9723685D /* Build configuration list for PBXNativeTarget "Pods-TLTalk-BDKNotifyHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D3279D696E473295F03DC33 /* Debug */,
+				94D75C2A62F54611DF610878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50947CB94CCEE0D9D4E4E781 /* Project object */;
+}

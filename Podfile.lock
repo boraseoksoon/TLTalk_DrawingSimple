@@ -1,0 +1,48 @@
+PODS:
+  - BButton (4.0.2)
+  - BDKNotifyHUD (1.1.0)
+  - DropdownMenu (1.0.0)
+  - EAIntroView (2.7.3):
+    - EARestrictedScrollView (~> 0.1.0)
+  - EARestrictedScrollView (0.1.0)
+  - FontAwesomeKit (2.2.0):
+    - FontAwesomeKit/Core (= 2.2.0)
+    - FontAwesomeKit/FontAwesome (= 2.2.0)
+    - FontAwesomeKit/FoundationIcons (= 2.2.0)
+    - FontAwesomeKit/IonIcons (= 2.2.0)
+    - FontAwesomeKit/Zocial (= 2.2.0)
+  - FontAwesomeKit/Core (2.2.0)
+  - FontAwesomeKit/FontAwesome (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.2.0):
+    - FontAwesomeKit/Core
+  - iOS-Slide-Menu (1.4.6)
+  - SMPageControl (1.2)
+  - SWFrameButton (1.2.0)
+
+DEPENDENCIES:
+  - BButton
+  - BDKNotifyHUD (~> 1.1.0)
+  - DropdownMenu
+  - EAIntroView
+  - FontAwesomeKit
+  - iOS-Slide-Menu (~> 1.4.0)
+  - SMPageControl (~> 1.2)
+  - SWFrameButton
+
+SPEC CHECKSUMS:
+  BButton: ab0f2ed3b998ae73c5188b57d270d81e4a1eeb27
+  BDKNotifyHUD: 6ae3b0e8e93c709af63e31ab5c8c8011ac3efb8a
+  DropdownMenu: 5777e17ac6ddbc69b151719b83a838da81440786
+  EAIntroView: bedde44388280d71c9798ce36c82720901596355
+  EARestrictedScrollView: 5ab3eadd9ea55282cc72df0daecb09803059e3a0
+  FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
+  iOS-Slide-Menu: 3a8b157f87694fce888899f169e05b433575ff90
+  SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
+  SWFrameButton: 9d6e46b85d673fc7dc0adc23159cd3448aab0ed6
+
+COCOAPODS: 0.36.4

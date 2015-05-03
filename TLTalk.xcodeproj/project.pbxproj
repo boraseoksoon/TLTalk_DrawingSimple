@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47B892641AF66E81003A4EB5 /* intro5.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B8925E1AF66E81003A4EB5 /* intro5.png */; };
+		47B892651AF66E81003A4EB5 /* white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47B8925F1AF66E81003A4EB5 /* white.jpg */; };
+		47B8926A1AF6746A003A4EB5 /* intro1.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B892661AF6746A003A4EB5 /* intro1.png */; };
+		47B8926B1AF6746A003A4EB5 /* intro2.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B892671AF6746A003A4EB5 /* intro2.png */; };
+		47B8926C1AF6746A003A4EB5 /* intro3.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B892681AF6746A003A4EB5 /* intro3.png */; };
+		47B8926D1AF6746A003A4EB5 /* intro4.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B892691AF6746A003A4EB5 /* intro4.png */; };
+		47BF457C1AF61BCA00FEFF6E /* ACEDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BF45791AF61BCA00FEFF6E /* ACEDrawingTools.m */; };
+		47BF457D1AF61BCA00FEFF6E /* ACEDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BF457B1AF61BCA00FEFF6E /* ACEDrawingView.m */; };
+		47BFB4601AF3A51500704DC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BFB45F1AF3A51500704DC9 /* CoreGraphics.framework */; };
+		47BFB4651AF3AF3400704DC9 /* UIDropdownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFB4621AF3AF3400704DC9 /* UIDropdownItem.m */; };
+		47BFB4661AF3AF3400704DC9 /* UIDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFB4641AF3AF3400704DC9 /* UIDropdownMenu.m */; };
+		47C5AF4A1AF352C40018F12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C5AF491AF352C40018F12E /* main.m */; };
+		47C5AF4D1AF352C40018F12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C5AF4C1AF352C40018F12E /* AppDelegate.m */; };
+		47C5AF531AF352C40018F12E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C5AF511AF352C40018F12E /* Main.storyboard */; };
+		47C5AF551AF352C40018F12E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47C5AF541AF352C40018F12E /* Images.xcassets */; };
+		47C5AF581AF352C40018F12E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C5AF561AF352C40018F12E /* LaunchScreen.xib */; };
+		47C5AF641AF352C40018F12E /* TLTalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C5AF631AF352C40018F12E /* TLTalkTests.m */; };
+		47C5AF6F1AF355580018F12E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C5AF6E1AF355580018F12E /* RootViewController.m */; };
+		47C5E1991AF535F900F7E38F /* whiteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1981AF535F900F7E38F /* whiteButton.png */; };
+		47C5E19C1AF5370E00F7E38F /* ico_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E19A1AF5370E00F7E38F /* ico_1.png */; };
+		47C5E19D1AF5370E00F7E38F /* web_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E19B1AF5370E00F7E38F /* web_check.png */; };
+		47C5E1A21AF53A6400F7E38F /* JSS.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1A11AF53A6400F7E38F /* JSS.png */; };
+		47C5E1AC1AF541A600F7E38F /* colorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1A31AF541A600F7E38F /* colorIcon.png */; };
+		47C5E1AD1AF541A600F7E38F /* drawIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1A41AF541A600F7E38F /* drawIcon.png */; };
+		47C5E1AE1AF541A600F7E38F /* eraserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1A51AF541A600F7E38F /* eraserIcon.png */; };
+		47C5E1AF1AF541A600F7E38F /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1A61AF541A600F7E38F /* facebook.png */; };
+		47C5E1B01AF541A600F7E38F /* gplus.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1A71AF541A600F7E38F /* gplus.png */; };
+		47C5E1B11AF541A600F7E38F /* linkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1A81AF541A600F7E38F /* linkedin.png */; };
+		47C5E1B21AF541A600F7E38F /* style.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1A91AF541A600F7E38F /* style.png */; };
+		47C5E1B31AF541A600F7E38F /* styleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1AA1AF541A600F7E38F /* styleIcon.png */; };
+		47C5E1B41AF541A600F7E38F /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1AB1AF541A600F7E38F /* twitter.png */; };
+		47C5E1B81AF5530600F7E38F /* iOSPhotoAlbumIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1B51AF5530600F7E38F /* iOSPhotoAlbumIcon.png */; };
+		47C5E1B91AF5530600F7E38F /* SelectFromiOSAlbumIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1B61AF5530600F7E38F /* SelectFromiOSAlbumIcon.png */; };
+		47C5E1BA1AF5530600F7E38F /* takingPhotoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1B71AF5530600F7E38F /* takingPhotoIcon.png */; };
+		47C5E1BC1AF5537700F7E38F /* iOSDefaultAlbumIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1BB1AF5537700F7E38F /* iOSDefaultAlbumIcon.png */; };
+		47C5E1BE1AF5566000F7E38F /* undoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1BD1AF5566000F7E38F /* undoIcon.png */; };
+		47C5E1C01AF556EA00F7E38F /* redoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1BF1AF556EA00F7E38F /* redoIcon.png */; };
+		47C5E1E11AF560B600F7E38F /* brush_color_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1DA1AF560B600F7E38F /* brush_color_blue.png */; };
+		47C5E1E21AF560B600F7E38F /* brush_style_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1DB1AF560B600F7E38F /* brush_style_blue.png */; };
+		47C5E1E31AF560B600F7E38F /* draw_text_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1DC1AF560B600F7E38F /* draw_text_blue.png */; };
+		47C5E1E41AF560B600F7E38F /* drawMode_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1DD1AF560B600F7E38F /* drawMode_blue.png */; };
+		47C5E1E51AF560B600F7E38F /* eraser_blue2.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1DE1AF560B600F7E38F /* eraser_blue2.png */; };
+		47C5E1E71AF560B600F7E38F /* takingPicture_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1E01AF560B600F7E38F /* takingPicture_blue.png */; };
+		47C5E1E91AF5612C00F7E38F /* thickness_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1E81AF5612C00F7E38F /* thickness_blue.png */; };
+		47C5E1EB1AF5625D00F7E38F /* select_from_album_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1EA1AF5625D00F7E38F /* select_from_album_blue.png */; };
+		47C5E1ED1AF562D800F7E38F /* save_image_to_iOS_album_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1EC1AF562D800F7E38F /* save_image_to_iOS_album_blue.png */; };
+		47C5E1EF1AF5632100F7E38F /* from_album_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1EE1AF5632100F7E38F /* from_album_blue.png */; };
+		47C5E1F21AF5678B00F7E38F /* brush_style_in_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1F01AF5678B00F7E38F /* brush_style_in_blue.png */; };
+		47C5E1F31AF5678B00F7E38F /* getIntoIcon_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1F11AF5678B00F7E38F /* getIntoIcon_blue.png */; };
+		47C5E1F91AF5690C00F7E38F /* brush_style_blue_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1F81AF5690C00F7E38F /* brush_style_blue_copy.png */; };
+		47C5E1FD1AF56E1400F7E38F /* tltalk_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1FC1AF56E1400F7E38F /* tltalk_image.png */; };
+		47C5E1FF1AF56F1000F7E38F /* intro_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E1FE1AF56F1000F7E38F /* intro_blue.png */; };
+		47C5E2011AF56FED00F7E38F /* intro_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E2001AF56FED00F7E38F /* intro_red.png */; };
+		47C5E2031AF5717100F7E38F /* intro_red_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E2021AF5717100F7E38F /* intro_red_copy.png */; };
+		47C5E20E1AF5739600F7E38F /* DrawingSimpleIcon87x87pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E2091AF5739500F7E38F /* DrawingSimpleIcon87x87pt.png */; };
+		47C5E20F1AF5739600F7E38F /* DrawingSimpleIcon180x180pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E20A1AF5739500F7E38F /* DrawingSimpleIcon180x180pt.png */; };
+		47C5E2101AF5739600F7E38F /* DrawingSimpleIcon120x120pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E20B1AF5739500F7E38F /* DrawingSimpleIcon120x120pt.png */; };
+		47C5E2111AF5739600F7E38F /* DrawingSimpleIcon58x58pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E20C1AF5739500F7E38F /* DrawingSimpleIcon58x58pt.png */; };
+		47C5E2121AF5739600F7E38F /* DrawingSimpleIcon80x80pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C5E20D1AF5739600F7E38F /* DrawingSimpleIcon80x80pt.png */; };
+		47E9CCC51AF4BE990088FF53 /* DrawToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E9CCC41AF4BE990088FF53 /* DrawToolViewController.m */; };
+		C622776F86B45B12E6612376 /* libPods-TLTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517DCCBE9ACC744768106A76 /* libPods-TLTalk.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47C5AF5E1AF352C40018F12E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47C5AF3C1AF352C40018F12E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47C5AF431AF352C40018F12E;
+			remoteInfo = TLTalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26C3BC6689628BDB408AEA5A /* Pods-TLTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TLTalk/Pods-TLTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		47B8925E1AF66E81003A4EB5 /* intro5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro5.png; sourceTree = "<group>"; };
+		47B8925F1AF66E81003A4EB5 /* white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white.jpg; sourceTree = "<group>"; };
+		47B892661AF6746A003A4EB5 /* intro1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro1.png; sourceTree = "<group>"; };
+		47B892671AF6746A003A4EB5 /* intro2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro2.png; sourceTree = "<group>"; };
+		47B892681AF6746A003A4EB5 /* intro3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro3.png; sourceTree = "<group>"; };
+		47B892691AF6746A003A4EB5 /* intro4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro4.png; sourceTree = "<group>"; };
+		47BF45781AF61BCA00FEFF6E /* ACEDrawingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingTools.h; sourceTree = "<group>"; };
+		47BF45791AF61BCA00FEFF6E /* ACEDrawingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingTools.m; sourceTree = "<group>"; };
+		47BF457A1AF61BCA00FEFF6E /* ACEDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingView.h; sourceTree = "<group>"; };
+		47BF457B1AF61BCA00FEFF6E /* ACEDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingView.m; sourceTree = "<group>"; };
+		47BFB45F1AF3A51500704DC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47BFB4611AF3AF3400704DC9 /* UIDropdownItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDropdownItem.h; sourceTree = "<group>"; };
+		47BFB4621AF3AF3400704DC9 /* UIDropdownItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDropdownItem.m; sourceTree = "<group>"; };
+		47BFB4631AF3AF3400704DC9 /* UIDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDropdownMenu.h; sourceTree = "<group>"; };
+		47BFB4641AF3AF3400704DC9 /* UIDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDropdownMenu.m; sourceTree = "<group>"; };
+		47C5AF441AF352C40018F12E /* TLTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47C5AF481AF352C40018F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47C5AF491AF352C40018F12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47C5AF4B1AF352C40018F12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TLTalk/AppDelegate.h; sourceTree = "<group>"; };
+		47C5AF4C1AF352C40018F12E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TLTalk/AppDelegate.m; sourceTree = "<group>"; };
+		47C5AF521AF352C40018F12E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47C5AF541AF352C40018F12E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47C5AF571AF352C40018F12E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		47C5AF5D1AF352C40018F12E /* TLTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TLTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47C5AF621AF352C40018F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47C5AF631AF352C40018F12E /* TLTalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTalkTests.m; sourceTree = "<group>"; };
+		47C5AF6D1AF355580018F12E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		47C5AF6E1AF355580018F12E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		47C5AF731AF356CC0018F12E /* TLTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TLTalk-Bridging-Header.h"; sourceTree = "<group>"; };
+		47C5E1981AF535F900F7E38F /* whiteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButton.png; sourceTree = "<group>"; };
+		47C5E19A1AF5370E00F7E38F /* ico_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_1.png; sourceTree = "<group>"; };
+		47C5E19B1AF5370E00F7E38F /* web_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web_check.png; sourceTree = "<group>"; };
+		47C5E1A11AF53A6400F7E38F /* JSS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JSS.png; sourceTree = "<group>"; };
+		47C5E1A31AF541A600F7E38F /* colorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorIcon.png; sourceTree = "<group>"; };
+		47C5E1A41AF541A600F7E38F /* drawIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawIcon.png; sourceTree = "<group>"; };
+		47C5E1A51AF541A600F7E38F /* eraserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraserIcon.png; sourceTree = "<group>"; };
+		47C5E1A61AF541A600F7E38F /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		47C5E1A71AF541A600F7E38F /* gplus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gplus.png; sourceTree = "<group>"; };
+		47C5E1A81AF541A600F7E38F /* linkedin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedin.png; sourceTree = "<group>"; };
+		47C5E1A91AF541A600F7E38F /* style.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style.png; sourceTree = "<group>"; };
+		47C5E1AA1AF541A600F7E38F /* styleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = styleIcon.png; sourceTree = "<group>"; };
+		47C5E1AB1AF541A600F7E38F /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		47C5E1B51AF5530600F7E38F /* iOSPhotoAlbumIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOSPhotoAlbumIcon.png; sourceTree = "<group>"; };
+		47C5E1B61AF5530600F7E38F /* SelectFromiOSAlbumIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectFromiOSAlbumIcon.png; sourceTree = "<group>"; };
+		47C5E1B71AF5530600F7E38F /* takingPhotoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takingPhotoIcon.png; sourceTree = "<group>"; };
+		47C5E1BB1AF5537700F7E38F /* iOSDefaultAlbumIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOSDefaultAlbumIcon.png; sourceTree = "<group>"; };
+		47C5E1BD1AF5566000F7E38F /* undoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = undoIcon.png; sourceTree = "<group>"; };
+		47C5E1BF1AF556EA00F7E38F /* redoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redoIcon.png; sourceTree = "<group>"; };
+		47C5E1DA1AF560B600F7E38F /* brush_color_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brush_color_blue.png; sourceTree = "<group>"; };
+		47C5E1DB1AF560B600F7E38F /* brush_style_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brush_style_blue.png; sourceTree = "<group>"; };
+		47C5E1DC1AF560B600F7E38F /* draw_text_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = draw_text_blue.png; sourceTree = "<group>"; };
+		47C5E1DD1AF560B600F7E38F /* drawMode_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawMode_blue.png; sourceTree = "<group>"; };
+		47C5E1DE1AF560B600F7E38F /* eraser_blue2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser_blue2.png; sourceTree = "<group>"; };
+		47C5E1E01AF560B600F7E38F /* takingPicture_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takingPicture_blue.png; sourceTree = "<group>"; };
+		47C5E1E81AF5612C00F7E38F /* thickness_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thickness_blue.png; sourceTree = "<group>"; };
+		47C5E1EA1AF5625D00F7E38F /* select_from_album_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_from_album_blue.png; sourceTree = "<group>"; };
+		47C5E1EC1AF562D800F7E38F /* save_image_to_iOS_album_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save_image_to_iOS_album_blue.png; sourceTree = "<group>"; };
+		47C5E1EE1AF5632100F7E38F /* from_album_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = from_album_blue.png; sourceTree = "<group>"; };
+		47C5E1F01AF5678B00F7E38F /* brush_style_in_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brush_style_in_blue.png; sourceTree = "<group>"; };
+		47C5E1F11AF5678B00F7E38F /* getIntoIcon_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getIntoIcon_blue.png; sourceTree = "<group>"; };
+		47C5E1F81AF5690C00F7E38F /* brush_style_blue_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brush_style_blue_copy.png; sourceTree = "<group>"; };
+		47C5E1FC1AF56E1400F7E38F /* tltalk_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tltalk_image.png; sourceTree = "<group>"; };
+		47C5E1FE1AF56F1000F7E38F /* intro_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro_blue.png; sourceTree = "<group>"; };
+		47C5E2001AF56FED00F7E38F /* intro_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro_red.png; sourceTree = "<group>"; };
+		47C5E2021AF5717100F7E38F /* intro_red_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro_red_copy.png; sourceTree = "<group>"; };
+		47C5E2091AF5739500F7E38F /* DrawingSimpleIcon87x87pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DrawingSimpleIcon87x87pt.png; sourceTree = "<group>"; };
+		47C5E20A1AF5739500F7E38F /* DrawingSimpleIcon180x180pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DrawingSimpleIcon180x180pt.png; sourceTree = "<group>"; };
+		47C5E20B1AF5739500F7E38F /* DrawingSimpleIcon120x120pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DrawingSimpleIcon120x120pt.png; sourceTree = "<group>"; };
+		47C5E20C1AF5739500F7E38F /* DrawingSimpleIcon58x58pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DrawingSimpleIcon58x58pt.png; sourceTree = "<group>"; };
+		47C5E20D1AF5739600F7E38F /* DrawingSimpleIcon80x80pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DrawingSimpleIcon80x80pt.png; sourceTree = "<group>"; };
+		47E9CCC31AF4BE990088FF53 /* DrawToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawToolViewController.h; sourceTree = "<group>"; };
+		47E9CCC41AF4BE990088FF53 /* DrawToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawToolViewController.m; sourceTree = "<group>"; };
+		517DCCBE9ACC744768106A76 /* libPods-TLTalk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLTalk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7A8A38D96E74C9EAAF67F9 /* Pods-TLTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLTalk/Pods-TLTalk.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47C5AF411AF352C40018F12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47BFB4601AF3A51500704DC9 /* CoreGraphics.framework in Frameworks */,
+				C622776F86B45B12E6612376 /* libPods-TLTalk.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47C5AF5A1AF352C40018F12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47BFB4671AF3AF3600704DC9 /* DropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				47BFB4611AF3AF3400704DC9 /* UIDropdownItem.h */,
+				47BFB4621AF3AF3400704DC9 /* UIDropdownItem.m */,
+				47BFB4631AF3AF3400704DC9 /* UIDropdownMenu.h */,
+				47BFB4641AF3AF3400704DC9 /* UIDropdownMenu.m */,
+			);
+			name = DropDownMenu;
+			sourceTree = "<group>";
+		};
+		47BFB46A1AF3CE2F00704DC9 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Draw;
+			sourceTree = "<group>";
+		};
+		47C5AF3B1AF352C40018F12E = {
+			isa = PBXGroup;
+			children = (
+				47B892661AF6746A003A4EB5 /* intro1.png */,
+				47B892671AF6746A003A4EB5 /* intro2.png */,
+				47B892681AF6746A003A4EB5 /* intro3.png */,
+				47B892691AF6746A003A4EB5 /* intro4.png */,
+				47B8925E1AF66E81003A4EB5 /* intro5.png */,
+				47B8925F1AF66E81003A4EB5 /* white.jpg */,
+				47C5AF461AF352C40018F12E /* TLTalk */,
+				47C5AF601AF352C40018F12E /* TLTalkTests */,
+				47C5AF451AF352C40018F12E /* Products */,
+				9E5529C831E5F40951A2FCEE /* Pods */,
+				C249AD6CFD76F7EB8F5B6605 /* Frameworks */,
+				47C5AF731AF356CC0018F12E /* TLTalk-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		47C5AF451AF352C40018F12E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47C5AF441AF352C40018F12E /* TLTalk.app */,
+				47C5AF5D1AF352C40018F12E /* TLTalkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47C5AF461AF352C40018F12E /* TLTalk */ = {
+			isa = PBXGroup;
+			children = (
+				47C5E1FA1AF569A700F7E38F /* Storyboard */,
+				47C5E19E1AF5370F00F7E38F /* ImageResources */,
+				47C5AF541AF352C40018F12E /* Images.xcassets */,
+				47C5AF771AF356E40018F12E /* Model */,
+				47C5AF761AF356D90018F12E /* View */,
+				47C5AF781AF356E70018F12E /* Controller */,
+				47C5AF471AF352C40018F12E /* Supporting Files */,
+			);
+			path = TLTalk;
+			sourceTree = "<group>";
+		};
+		47C5AF471AF352C40018F12E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47C5AF481AF352C40018F12E /* Info.plist */,
+				47C5AF491AF352C40018F12E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47C5AF601AF352C40018F12E /* TLTalkTests */ = {
+			isa = PBXGroup;
+			children = (
+				47C5AF631AF352C40018F12E /* TLTalkTests.m */,
+				47C5AF611AF352C40018F12E /* Supporting Files */,
+			);
+			path = TLTalkTests;
+			sourceTree = "<group>";
+		};
+		47C5AF611AF352C40018F12E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47C5AF621AF352C40018F12E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47C5AF761AF356D90018F12E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47BF45781AF61BCA00FEFF6E /* ACEDrawingTools.h */,
+				47BF45791AF61BCA00FEFF6E /* ACEDrawingTools.m */,
+				47BF457A1AF61BCA00FEFF6E /* ACEDrawingView.h */,
+				47BF457B1AF61BCA00FEFF6E /* ACEDrawingView.m */,
+				47BFB46A1AF3CE2F00704DC9 /* Draw */,
+				47BFB4671AF3AF3600704DC9 /* DropDownMenu */,
+			);
+			name = View;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		47C5AF771AF356E40018F12E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		47C5AF781AF356E70018F12E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47C5E1FB1AF569BE00F7E38F /* AppDelegate */,
+				47C5AF6D1AF355580018F12E /* RootViewController.h */,
+				47C5AF6E1AF355580018F12E /* RootViewController.m */,
+				47E9CCC31AF4BE990088FF53 /* DrawToolViewController.h */,
+				47E9CCC41AF4BE990088FF53 /* DrawToolViewController.m */,
+			);
+			name = Controller;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		47C5E19E1AF5370F00F7E38F /* ImageResources */ = {
+			isa = PBXGroup;
+			children = (
+				47C5E2141AF5740F00F7E38F /* ETC */,
+				47C5E2081AF5735E00F7E38F /* AppIcon */,
+				47C5E1C11AF559EF00F7E38F /* blue */,
+			);
+			name = ImageResources;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		47C5E1C11AF559EF00F7E38F /* blue */ = {
+			isa = PBXGroup;
+			children = (
+				47C5E1F81AF5690C00F7E38F /* brush_style_blue_copy.png */,
+				47C5E1F01AF5678B00F7E38F /* brush_style_in_blue.png */,
+				47C5E1F11AF5678B00F7E38F /* getIntoIcon_blue.png */,
+				47C5E1EE1AF5632100F7E38F /* from_album_blue.png */,
+				47C5E1EC1AF562D800F7E38F /* save_image_to_iOS_album_blue.png */,
+				47C5E1EA1AF5625D00F7E38F /* select_from_album_blue.png */,
+				47C5E1E81AF5612C00F7E38F /* thickness_blue.png */,
+				47C5E1DA1AF560B600F7E38F /* brush_color_blue.png */,
+				47C5E1DB1AF560B600F7E38F /* brush_style_blue.png */,
+				47C5E1DC1AF560B600F7E38F /* draw_text_blue.png */,
+				47C5E1DD1AF560B600F7E38F /* drawMode_blue.png */,
+				47C5E1DE1AF560B600F7E38F /* eraser_blue2.png */,
+				47C5E1E01AF560B600F7E38F /* takingPicture_blue.png */,
+			);
+			name = blue;
+			sourceTree = "<group>";
+		};
+		47C5E1FA1AF569A700F7E38F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				47C5AF511AF352C40018F12E /* Main.storyboard */,
+				47C5AF561AF352C40018F12E /* LaunchScreen.xib */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		47C5E1FB1AF569BE00F7E38F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				47C5AF4B1AF352C40018F12E /* AppDelegate.h */,
+				47C5AF4C1AF352C40018F12E /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		47C5E2081AF5735E00F7E38F /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				47C5E2091AF5739500F7E38F /* DrawingSimpleIcon87x87pt.png */,
+				47C5E20A1AF5739500F7E38F /* DrawingSimpleIcon180x180pt.png */,
+				47C5E20B1AF5739500F7E38F /* DrawingSimpleIcon120x120pt.png */,
+				47C5E20C1AF5739500F7E38F /* DrawingSimpleIcon58x58pt.png */,
+				47C5E20D1AF5739600F7E38F /* DrawingSimpleIcon80x80pt.png */,
+			);
+			name = AppIcon;
+			sourceTree = "<group>";
+		};
+		47C5E2141AF5740F00F7E38F /* ETC */ = {
+			isa = PBXGroup;
+			children = (
+				47C5E2021AF5717100F7E38F /* intro_red_copy.png */,
+				47C5E2001AF56FED00F7E38F /* intro_red.png */,
+				47C5E1FE1AF56F1000F7E38F /* intro_blue.png */,
+				47C5E1FC1AF56E1400F7E38F /* tltalk_image.png */,
+				47C5E1BB1AF5537700F7E38F /* iOSDefaultAlbumIcon.png */,
+				47C5E1B51AF5530600F7E38F /* iOSPhotoAlbumIcon.png */,
+				47C5E1B61AF5530600F7E38F /* SelectFromiOSAlbumIcon.png */,
+				47C5E1B71AF5530600F7E38F /* takingPhotoIcon.png */,
+				47C5E1A31AF541A600F7E38F /* colorIcon.png */,
+				47C5E1A41AF541A600F7E38F /* drawIcon.png */,
+				47C5E1A51AF541A600F7E38F /* eraserIcon.png */,
+				47C5E1A61AF541A600F7E38F /* facebook.png */,
+				47C5E1A71AF541A600F7E38F /* gplus.png */,
+				47C5E1A81AF541A600F7E38F /* linkedin.png */,
+				47C5E1A91AF541A600F7E38F /* style.png */,
+				47C5E1AA1AF541A600F7E38F /* styleIcon.png */,
+				47C5E1AB1AF541A600F7E38F /* twitter.png */,
+				47C5E19A1AF5370E00F7E38F /* ico_1.png */,
+				47C5E19B1AF5370E00F7E38F /* web_check.png */,
+				47C5E1981AF535F900F7E38F /* whiteButton.png */,
+				47C5E1BF1AF556EA00F7E38F /* redoIcon.png */,
+				47C5E1BD1AF5566000F7E38F /* undoIcon.png */,
+				47C5E1A11AF53A6400F7E38F /* JSS.png */,
+			);
+			name = ETC;
+			sourceTree = "<group>";
+		};
+		9E5529C831E5F40951A2FCEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26C3BC6689628BDB408AEA5A /* Pods-TLTalk.debug.xcconfig */,
+				CA7A8A38D96E74C9EAAF67F9 /* Pods-TLTalk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C249AD6CFD76F7EB8F5B6605 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47BFB45F1AF3A51500704DC9 /* CoreGraphics.framework */,
+				517DCCBE9ACC744768106A76 /* libPods-TLTalk.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47C5AF431AF352C40018F12E /* TLTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47C5AF671AF352C40018F12E /* Build configuration list for PBXNativeTarget "TLTalk" */;
+			buildPhases = (
+				834FB299291A8B37715ED329 /* Check Pods Manifest.lock */,
+				47C5AF401AF352C40018F12E /* Sources */,
+				47C5AF411AF352C40018F12E /* Frameworks */,
+				47C5AF421AF352C40018F12E /* Resources */,
+				DA27208E266CD8F1C2ECA00C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TLTalk;
+			productName = TLTalk;
+			productReference = 47C5AF441AF352C40018F12E /* TLTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47C5AF5C1AF352C40018F12E /* TLTalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47C5AF6A1AF352C40018F12E /* Build configuration list for PBXNativeTarget "TLTalkTests" */;
+			buildPhases = (
+				47C5AF591AF352C40018F12E /* Sources */,
+				47C5AF5A1AF352C40018F12E /* Frameworks */,
+				47C5AF5B1AF352C40018F12E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47C5AF5F1AF352C40018F12E /* PBXTargetDependency */,
+			);
+			name = TLTalkTests;
+			productName = TLTalkTests;
+			productReference = 47C5AF5D1AF352C40018F12E /* TLTalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47C5AF3C1AF352C40018F12E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = SeoksoonJang;
+				TargetAttributes = {
+					47C5AF431AF352C40018F12E = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					47C5AF5C1AF352C40018F12E = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 47C5AF431AF352C40018F12E;
+					};
+				};
+			};
+			buildConfigurationList = 47C5AF3F1AF352C40018F12E /* Build configuration list for PBXProject "TLTalk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47C5AF3B1AF352C40018F12E;
+			productRefGroup = 47C5AF451AF352C40018F12E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47C5AF431AF352C40018F12E /* TLTalk */,
+				47C5AF5C1AF352C40018F12E /* TLTalkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47C5AF421AF352C40018F12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C5E1AE1AF541A600F7E38F /* eraserIcon.png in Resources */,
+				47C5E1BA1AF5530600F7E38F /* takingPhotoIcon.png in Resources */,
+				47C5E1E71AF560B600F7E38F /* takingPicture_blue.png in Resources */,
+				47C5E1E51AF560B600F7E38F /* eraser_blue2.png in Resources */,
+				47C5E1BC1AF5537700F7E38F /* iOSDefaultAlbumIcon.png in Resources */,
+				47B892651AF66E81003A4EB5 /* white.jpg in Resources */,
+				47C5AF531AF352C40018F12E /* Main.storyboard in Resources */,
+				47C5E1FF1AF56F1000F7E38F /* intro_blue.png in Resources */,
+				47C5E1991AF535F900F7E38F /* whiteButton.png in Resources */,
+				47C5E1EF1AF5632100F7E38F /* from_album_blue.png in Resources */,
+				47C5E1A21AF53A6400F7E38F /* JSS.png in Resources */,
+				47C5AF581AF352C40018F12E /* LaunchScreen.xib in Resources */,
+				47C5E1BE1AF5566000F7E38F /* undoIcon.png in Resources */,
+				47C5E1B01AF541A600F7E38F /* gplus.png in Resources */,
+				47C5E2111AF5739600F7E38F /* DrawingSimpleIcon58x58pt.png in Resources */,
+				47C5E2121AF5739600F7E38F /* DrawingSimpleIcon80x80pt.png in Resources */,
+				47C5E1B31AF541A600F7E38F /* styleIcon.png in Resources */,
+				47B892641AF66E81003A4EB5 /* intro5.png in Resources */,
+				47C5E1F31AF5678B00F7E38F /* getIntoIcon_blue.png in Resources */,
+				47B8926D1AF6746A003A4EB5 /* intro4.png in Resources */,
+				47C5E1AC1AF541A600F7E38F /* colorIcon.png in Resources */,
+				47C5E1FD1AF56E1400F7E38F /* tltalk_image.png in Resources */,
+				47C5E1ED1AF562D800F7E38F /* save_image_to_iOS_album_blue.png in Resources */,
+				47C5E2101AF5739600F7E38F /* DrawingSimpleIcon120x120pt.png in Resources */,
+				47C5E20F1AF5739600F7E38F /* DrawingSimpleIcon180x180pt.png in Resources */,
+				47C5E1E21AF560B600F7E38F /* brush_style_blue.png in Resources */,
+				47B8926A1AF6746A003A4EB5 /* intro1.png in Resources */,
+				47C5E1E41AF560B600F7E38F /* drawMode_blue.png in Resources */,
+				47C5E2031AF5717100F7E38F /* intro_red_copy.png in Resources */,
+				47C5E1B91AF5530600F7E38F /* SelectFromiOSAlbumIcon.png in Resources */,
+				47C5E1AD1AF541A600F7E38F /* drawIcon.png in Resources */,
+				47C5E19D1AF5370E00F7E38F /* web_check.png in Resources */,
+				47C5E1B81AF5530600F7E38F /* iOSPhotoAlbumIcon.png in Resources */,
+				47C5E1E11AF560B600F7E38F /* brush_color_blue.png in Resources */,
+				47C5E1E31AF560B600F7E38F /* draw_text_blue.png in Resources */,
+				47C5E1EB1AF5625D00F7E38F /* select_from_album_blue.png in Resources */,
+				47C5E1AF1AF541A600F7E38F /* facebook.png in Resources */,
+				47C5E1C01AF556EA00F7E38F /* redoIcon.png in Resources */,
+				47C5E1F21AF5678B00F7E38F /* brush_style_in_blue.png in Resources */,
+				47C5E1F91AF5690C00F7E38F /* brush_style_blue_copy.png in Resources */,
+				47B8926C1AF6746A003A4EB5 /* intro3.png in Resources */,
+				47C5E20E1AF5739600F7E38F /* DrawingSimpleIcon87x87pt.png in Resources */,
+				47C5E2011AF56FED00F7E38F /* intro_red.png in Resources */,
+				47C5E1B11AF541A600F7E38F /* linkedin.png in Resources */,
+				47C5E1B21AF541A600F7E38F /* style.png in Resources */,
+				47B8926B1AF6746A003A4EB5 /* intro2.png in Resources */,
+				47C5E1B41AF541A600F7E38F /* twitter.png in Resources */,
+				47C5AF551AF352C40018F12E /* Images.xcassets in Resources */,
+				47C5E19C1AF5370E00F7E38F /* ico_1.png in Resources */,
+				47C5E1E91AF5612C00F7E38F /* thickness_blue.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47C5AF5B1AF352C40018F12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		834FB299291A8B37715ED329 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA27208E266CD8F1C2ECA00C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TLTalk/Pods-TLTalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47C5AF401AF352C40018F12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C5AF4D1AF352C40018F12E /* AppDelegate.m in Sources */,
+				47E9CCC51AF4BE990088FF53 /* DrawToolViewController.m in Sources */,
+				47C5AF4A1AF352C40018F12E /* main.m in Sources */,
+				47BF457D1AF61BCA00FEFF6E /* ACEDrawingView.m in Sources */,
+				47BFB4651AF3AF3400704DC9 /* UIDropdownItem.m in Sources */,
+				47C5AF6F1AF355580018F12E /* RootViewController.m in Sources */,
+				47BF457C1AF61BCA00FEFF6E /* ACEDrawingTools.m in Sources */,
+				47BFB4661AF3AF3400704DC9 /* UIDropdownMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47C5AF591AF352C40018F12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C5AF641AF352C40018F12E /* TLTalkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47C5AF5F1AF352C40018F12E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47C5AF431AF352C40018F12E /* TLTalk */;
+			targetProxy = 47C5AF5E1AF352C40018F12E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47C5AF511AF352C40018F12E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47C5AF521AF352C40018F12E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47C5AF561AF352C40018F12E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47C5AF571AF352C40018F12E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47C5AF651AF352C40018F12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		47C5AF661AF352C40018F12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47C5AF681AF352C40018F12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26C3BC6689628BDB408AEA5A /* Pods-TLTalk.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = TLTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TLTalk-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		47C5AF691AF352C40018F12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA7A8A38D96E74C9EAAF67F9 /* Pods-TLTalk.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = TLTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TLTalk-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		47C5AF6B1AF352C40018F12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TLTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TLTalk.app/TLTalk";
+			};
+			name = Debug;
+		};
+		47C5AF6C1AF352C40018F12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TLTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TLTalk.app/TLTalk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47C5AF3F1AF352C40018F12E /* Build configuration list for PBXProject "TLTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47C5AF651AF352C40018F12E /* Debug */,
+				47C5AF661AF352C40018F12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47C5AF671AF352C40018F12E /* Build configuration list for PBXNativeTarget "TLTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47C5AF681AF352C40018F12E /* Debug */,
+				47C5AF691AF352C40018F12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47C5AF6A1AF352C40018F12E /* Build configuration list for PBXNativeTarget "TLTalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47C5AF6B1AF352C40018F12E /* Debug */,
+				47C5AF6C1AF352C40018F12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47C5AF3C1AF352C40018F12E /* Project object */;
+}
