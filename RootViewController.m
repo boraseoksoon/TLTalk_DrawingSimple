@@ -88,6 +88,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
+    {
+        // app already launched
+    }
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        // This is the first launch ever
+        self.navigationController.navigationBarHidden = YES;
+        
+        rootView = self.view;
+        [self showIntroWithCrossDissolve];
+    }
+    
 
     self.drawingView.isBlueColorOn = NO;
     self.drawingView.isRedColorOn = YES;
@@ -95,11 +111,12 @@
     self.drawingView.userInteractionEnabled = YES;
     
     
+    /*
     self.navigationController.navigationBarHidden = YES;
-    
-    
+
     rootView = self.view;
     [self showIntroWithCrossDissolve];
+     */
     
     
     
@@ -526,8 +543,10 @@
                           style:UIAlertActionStyleDefault
                           handler:^(UIAlertAction * action)
                           {
+                              self.mainImage.image = [UIImage imageNamed:@""];
                               // do something you need
                               [self clearDraw];
+                              
                           }];
     UIAlertAction* no = [UIAlertAction
                          actionWithTitle:@"NO"
@@ -585,6 +604,7 @@
 // it actually executes clear.
 - (void)clearDraw
 {
+    // self.mainImage.image = nil;
     [self.drawingView clear];
     [self updateButtonStatus];
 }

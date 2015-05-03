@@ -22,6 +22,8 @@
     [self initAppearance];
     [self registerNavigationSliderIcon];
     
+
+    
     return YES;
 }
 
