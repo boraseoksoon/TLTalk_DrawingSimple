@@ -2,9 +2,21 @@
 # PURPOSE
 This iOS SIMPLE Application(Called Drawing Simple) is designed for simple drawing including undo, redo functionality and various kinds of UI effect such as SlideEffect, Dropdown.
 
+# SCREENSHOT
+![ScreenShot](http://postimg.org/image/r23w5rdy3/)
+
+![ScreenShot](http://postimg.org/image/jkqtmzwnz/)
+
+![ScreenShot](http://postimg.org/image/9s6ovh3rb/)
+
+![ScreenShot](http://postimg.org/image/mooe7qqw1/)
+
+
 # REQUIREMENT
 This is optimized for iPhone 4Inch devices since it is proto-type.
 I'd soon update Auto-layout version for all devices.
+
+It is developed using cocoapods. If you face problem related to cocoapods installation, please check this link : https://cocoapods.org
 
 # HOW-TO
 To be updated(soon)
