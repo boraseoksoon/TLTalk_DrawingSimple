@@ -3,7 +3,7 @@
 This iOS SIMPLE Application(Called Drawing Simple) is designed for simple drawing including undo, redo functionality and various kinds of UI effect such as SlideEffect, Dropdown.
 
 # SCREENSHOT
-![ScreenShot](http://postimg.org/image/r23w5rdy3)
+![ScreenShot](http://s1.postimg.org/f08ibm4pr/Screen_Shot_2015_05_03_at_23_35_12.png)
 ![ScreenShot](http://postimg.org/image/jkqtmzwnz)
 ![ScreenShot](http://postimg.org/image/9s6ovh3rb)
 ![ScreenShot](http://postimg.org/image/mooe7qqw1)
