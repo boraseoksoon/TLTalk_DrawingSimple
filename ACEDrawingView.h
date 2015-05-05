@@ -27,7 +27,6 @@
 #import "AppDelegate.h"
 
 #define ACEDrawingViewVersion   1.0.0
-
 typedef enum {
     ACEDrawingToolTypePen,
     ACEDrawingToolTypeLine,
@@ -43,11 +42,14 @@ typedef enum {
 
 @interface ACEDrawingView : UIView<UITextViewDelegate, DrawToolViewControllerDelegate>
 
+// Flas that will be applied by DrawToolViewControllerDelegate
 @property (assign, nonatomic) BOOL isDrawModeOn;
 @property (assign, nonatomic) BOOL isBlueColorOn;
 @property (assign, nonatomic) BOOL isRedColorOn;
 
+// enum
 @property (nonatomic, assign) ACEDrawingToolType drawTool;
+// delegate
 @property (nonatomic, assign) id<ACEDrawingViewDelegate> delegate;
 
 // public properties
@@ -73,11 +75,9 @@ typedef enum {
 
 - (BOOL)canRedo;
 - (void)redoLatestStep;
-
 @end
 
-#pragma mark -
-
+#pragma mark - protocol
 @protocol ACEDrawingViewDelegate <NSObject>
 
 @optional

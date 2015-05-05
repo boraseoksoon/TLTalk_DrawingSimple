@@ -18,6 +18,9 @@
 		47BFB4601AF3A51500704DC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BFB45F1AF3A51500704DC9 /* CoreGraphics.framework */; };
 		47BFB4651AF3AF3400704DC9 /* UIDropdownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFB4621AF3AF3400704DC9 /* UIDropdownItem.m */; };
 		47BFB4661AF3AF3400704DC9 /* UIDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BFB4641AF3AF3400704DC9 /* UIDropdownMenu.m */; };
+		47C2CC121AF8D32D0075ED04 /* whiteBackgroundIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C2CC111AF8D32D0075ED04 /* whiteBackgroundIcon.png */; };
+		47C2CC151AF8D95E0075ED04 /* stack_minimum_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C2CC131AF8D95E0075ED04 /* stack_minimum_icon.png */; };
+		47C2CC161AF8D95E0075ED04 /* stackoverflow_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C2CC141AF8D95E0075ED04 /* stackoverflow_icon.png */; };
 		47C5AF4A1AF352C40018F12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C5AF491AF352C40018F12E /* main.m */; };
 		47C5AF4D1AF352C40018F12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C5AF4C1AF352C40018F12E /* AppDelegate.m */; };
 		47C5AF531AF352C40018F12E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C5AF511AF352C40018F12E /* Main.storyboard */; };
@@ -97,6 +100,9 @@
 		47BFB4621AF3AF3400704DC9 /* UIDropdownItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDropdownItem.m; sourceTree = "<group>"; };
 		47BFB4631AF3AF3400704DC9 /* UIDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDropdownMenu.h; sourceTree = "<group>"; };
 		47BFB4641AF3AF3400704DC9 /* UIDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDropdownMenu.m; sourceTree = "<group>"; };
+		47C2CC111AF8D32D0075ED04 /* whiteBackgroundIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteBackgroundIcon.png; sourceTree = "<group>"; };
+		47C2CC131AF8D95E0075ED04 /* stack_minimum_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stack_minimum_icon.png; sourceTree = "<group>"; };
+		47C2CC141AF8D95E0075ED04 /* stackoverflow_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stackoverflow_icon.png; sourceTree = "<group>"; };
 		47C5AF441AF352C40018F12E /* TLTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C5AF481AF352C40018F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47C5AF491AF352C40018F12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -312,6 +318,8 @@
 		47C5E1C11AF559EF00F7E38F /* blue */ = {
 			isa = PBXGroup;
 			children = (
+				47C2CC131AF8D95E0075ED04 /* stack_minimum_icon.png */,
+				47C2CC141AF8D95E0075ED04 /* stackoverflow_icon.png */,
 				47C5E1F81AF5690C00F7E38F /* brush_style_blue_copy.png */,
 				47C5E1F01AF5678B00F7E38F /* brush_style_in_blue.png */,
 				47C5E1F11AF5678B00F7E38F /* getIntoIcon_blue.png */,
@@ -385,6 +393,7 @@
 				47C5E1BF1AF556EA00F7E38F /* redoIcon.png */,
 				47C5E1BD1AF5566000F7E38F /* undoIcon.png */,
 				47C5E1A11AF53A6400F7E38F /* JSS.png */,
+				47C2CC111AF8D32D0075ED04 /* whiteBackgroundIcon.png */,
 			);
 			name = ETC;
 			sourceTree = "<group>";
@@ -519,6 +528,7 @@
 				47C5E1E41AF560B600F7E38F /* drawMode_blue.png in Resources */,
 				47C5E2031AF5717100F7E38F /* intro_red_copy.png in Resources */,
 				47C5E1B91AF5530600F7E38F /* SelectFromiOSAlbumIcon.png in Resources */,
+				47C2CC161AF8D95E0075ED04 /* stackoverflow_icon.png in Resources */,
 				47C5E1AD1AF541A600F7E38F /* drawIcon.png in Resources */,
 				47C5E19D1AF5370E00F7E38F /* web_check.png in Resources */,
 				47C5E1B81AF5530600F7E38F /* iOSPhotoAlbumIcon.png in Resources */,
@@ -529,6 +539,7 @@
 				47C5E1C01AF556EA00F7E38F /* redoIcon.png in Resources */,
 				47C5E1F21AF5678B00F7E38F /* brush_style_in_blue.png in Resources */,
 				47C5E1F91AF5690C00F7E38F /* brush_style_blue_copy.png in Resources */,
+				47C2CC121AF8D32D0075ED04 /* whiteBackgroundIcon.png in Resources */,
 				47B8926C1AF6746A003A4EB5 /* intro3.png in Resources */,
 				47C5E20E1AF5739600F7E38F /* DrawingSimpleIcon87x87pt.png in Resources */,
 				47C5E2011AF56FED00F7E38F /* intro_red.png in Resources */,
@@ -538,6 +549,7 @@
 				47C5E1B41AF541A600F7E38F /* twitter.png in Resources */,
 				47C5AF551AF352C40018F12E /* Images.xcassets in Resources */,
 				47C5E19C1AF5370E00F7E38F /* ico_1.png in Resources */,
+				47C2CC151AF8D95E0075ED04 /* stack_minimum_icon.png in Resources */,
 				47C5E1E91AF5612C00F7E38F /* thickness_blue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

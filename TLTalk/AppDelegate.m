@@ -1,14 +1,27 @@
-//
-//  AppDelegate.m
-//  TLTalk
-//
+
 //  Created by SeoksoonJang on 5/1/15.
 //  Copyright (c) 2015 SeoksoonJang. All rights reserved.
 //
+// https://github.com/boraseoksoon/TLTalk
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION
 
 #import "AppDelegate.h"
-
-
 @interface AppDelegate ()
 
 @end
@@ -22,51 +35,42 @@
     [self initAppearance];
     [self registerNavigationSliderIcon];
     
-
-    
     return YES;
 }
 
 -(void)registerNavigationSliderIcon{
     
-    
+    // Register Slider ViewController Instances
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                              bundle: nil];
     
     leftMenu = (DrawToolViewController*)[mainStoryboard
                                                                  instantiateViewControllerWithIdentifier: @"DrawToolViewController"];
     
+    // Register Slider ViewController Properties
     [SlideNavigationController sharedInstance].leftMenu = leftMenu;
     [SlideNavigationController sharedInstance].menuRevealAnimationDuration = .18;
     [SlideNavigationController sharedInstance].enableSwipeGesture = NO;
 
-    
-    /*
-    // Creating a custom bar button for right menu
-    UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [button setImage:[UIImage imageNamed:@"gear"] forState:UIControlStateNormal];
-    [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-    [SlideNavigationController sharedInstance].rightBarButtonItem = rightBarButtonItem;
-     */
-    
-    
+    // Register Slider ViewController Observers
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(slideDidClose:) name:SlideNavigationControllerDidClose object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(slideDidOpen:) name:SlideNavigationControllerDidOpen object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(slideDidReveal:) name:SlideNavigationControllerDidReveal object:nil];    
+}
 
-    
-    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidClose object:nil queue:nil usingBlock:^(NSNotification *note) {
-        NSString *menu = note.userInfo[@"menu"];
-        NSLog(@"Closed %@", menu);
-    }];
-    
-    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidOpen object:nil queue:nil usingBlock:^(NSNotification *note) {
-        NSString *menu = note.userInfo[@"menu"];
-        NSLog(@"Opened %@", menu);
-    }];
-    
-    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidReveal object:nil queue:nil usingBlock:^(NSNotification *note) {
-        NSString *menu = note.userInfo[@"menu"];
-        NSLog(@"Revealed %@", menu);
-    }];
+
+// Slider ViewControllers Notification Method
+-(void)slideDidClose : (NSNotification*)note{
+    NSString *menu = note.userInfo[@"menu"];
+    NSLog(@"slideDidClose %@", menu);
+}
+-(void)slideDidOpen : (NSNotification*)note{
+    NSString *menu = note.userInfo[@"menu"];
+    NSLog(@"slideDidOpen %@", menu);
+}
+-(void)slideDidReveal : (NSNotification*)note{
+    NSString *menu = note.userInfo[@"menu"];
+    NSLog(@"slideDidReveal %@", menu);
 }
 
 
@@ -86,8 +90,6 @@
     [[UIToolbar appearance] setBarTintColor:byteClubBlue];
     
 }
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

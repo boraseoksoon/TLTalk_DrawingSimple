@@ -30,13 +30,18 @@
 #import "ACEDrawingView.h"
 #import <EAIntroView/EAIntroView.h>
 
+// Forward Declarations
 @class BButton;
 @class SWFrameButton;
 @class UIDropdownMenu;
 
-
 @interface RootViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, DrawToolViewControllerDelegate, UIActionSheetDelegate, ACEDrawingViewDelegate, EAIntroDelegate>{
     
+    // Image Stack for Image Undo / Redo
+    int stackCounter;
+    NSMutableArray* imageStack;
+    
+    // SWFrameButton
     SWFrameButton* undoButton;
     SWFrameButton* redoButton;
     
@@ -47,10 +52,10 @@
     CGFloat blue;
     CGFloat brush;
     CGFloat opacity;
+    
+    
+    // BOOL flags
     BOOL mouseSwiped;
-    
-    
-    
     BOOL isDrawModeOn;
     BOOL isBlueColorOn;
     BOOL isRedColorOn;
@@ -64,12 +69,10 @@
 @property (strong, nonatomic) IBOutlet UIButton *drawButton;
 @property (strong, nonatomic) IBOutlet UIImageView *mainImage;
 
-
 @property (nonatomic, unsafe_unretained) IBOutlet ACEDrawingView *drawingView;
+
 @property (nonatomic, unsafe_unretained) IBOutlet UISlider *lineWidthSlider;
 @property (nonatomic, unsafe_unretained) IBOutlet UISlider *lineAlphaSlider;
-// @property (nonatomic, unsafe_unretained) IBOutlet UIImageView *previewImageView;
-
 
 @property (nonatomic, unsafe_unretained) IBOutlet UIBarButtonItem *undoButton;
 @property (nonatomic, unsafe_unretained) IBOutlet UIBarButtonItem *redoButton;
@@ -85,10 +88,5 @@
 - (IBAction)openDrawTools:(id)sender;
 - (IBAction)undoAction:(id)sender;
 - (IBAction)redoAction:(id)sender;
-
-/********************************************************************
-    UINavigation Action + DropDown Action
- ********************************************************************/
-
 
 @end

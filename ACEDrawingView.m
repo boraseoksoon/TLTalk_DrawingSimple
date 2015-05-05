@@ -25,9 +25,7 @@
 
 #import "ACEDrawingView.h"
 #import "ACEDrawingTools.h"
-
 #import <QuartzCore/QuartzCore.h>
-
 
 #define kBlueLineColor          [UIColor blueColor]
 #define kRedLineColor           [UIColor redColor]
@@ -39,6 +37,8 @@
 // experimental code
 #define PARTIAL_REDRAW          0
 
+
+// Class Extension(Anonymous Category)
 @interface ACEDrawingView () {
     CGPoint currentPoint;
     CGPoint previousPoint1;
@@ -54,12 +54,32 @@
 @end
 
 #pragma mark -
-
 @implementation ACEDrawingView
 
 @synthesize isDrawModeOn, isBlueColorOn, isRedColorOn;
 
+#pragma mark DrawToolViewControllerDelegate
+-(void)didDrawModeOn{
+    NSLog(@"DrawMode On!");
+    isDrawModeOn = YES;
+}
+-(void)didDrawModeOff{
+    NSLog(@"DrawMode Off!");
+    isDrawModeOn = NO;
+}
+-(void)didChangeToBlueColor{
+    NSLog(@"Blue On!");
+    isBlueColorOn = YES;
+    isRedColorOn = NO;
+}
+-(void)didChangeToRedColor{
+    NSLog(@"Red On!");
+    isBlueColorOn = NO;
+    isRedColorOn = YES;
+}
 
+
+#pragma mark UIView initialization
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -93,13 +113,14 @@
     self.backgroundColor = [UIColor clearColor];
     
     self.originalFrameYPos = self.frame.origin.y;
+    
+    // add observers for keyboard event
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
 }
 
 
 #pragma mark - Drawing
-
 - (void)drawRect:(CGRect)rect
 {
 #if PARTIAL_REDRAW
@@ -119,7 +140,6 @@
     if (redraw) {
         // erase the previous image
         self.image = nil;
-        // self.image = [UIImage imageNamed:@"intro_red.png"];
         
         // I need to redraw all the lines
         for (id<ACEDrawingTool> tool in self.pathArray) {
@@ -154,7 +174,6 @@
     // clear the current tool
     self.currentTool = nil;
 }
-
 
 - (id<ACEDrawingTool>)toolWithCurrentSettings
 {
@@ -211,10 +230,8 @@
 
 
 #pragma mark - Touch Methods
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
     if(isDrawModeOn){
         if (self.textView && !self.textView.hidden) {
             [self commitAndHideTextEntry];
@@ -254,11 +271,7 @@
         if ([self.delegate respondsToSelector:@selector(drawingView:willBeginDrawUsingTool:)]) {
             [self.delegate drawingView:self willBeginDrawUsingTool:self.currentTool];
         }
-
     }
-    
-    
-    
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -290,14 +303,11 @@
             [self.currentTool moveFromPoint:previousPoint1 toPoint:currentPoint];
             [self setNeedsDisplay];
         }
-        
-
     }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
     if(isDrawModeOn){
         // make sure a point is recorded
         [self touchesMoved:touches withEvent:event];
@@ -317,8 +327,158 @@
     [self touchesEnded:touches withEvent:event];
 }
 
-#pragma mark - Text Entry
+#pragma mark - Load Image
+- (void)loadImage:(UIImage *)image
+{
+    self.image = image;
+    
+    // when loading an external image, I'm cleaning all the paths and the undo buffer
+    [self.bufferArray removeAllObjects];
+    [self.pathArray removeAllObjects];
+    [self updateCacheImage:YES];
+    [self setNeedsDisplay];
+}
 
+- (void)loadImageData:(NSData *)imageData
+{
+    CGFloat imageScale;
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
+        imageScale = [[UIScreen mainScreen] scale];
+        
+    } else {
+        imageScale = 1.0;
+    }
+    
+    UIImage *image = [UIImage imageWithData:imageData scale:imageScale];
+    [self loadImage:image];
+}
+
+- (void)resetTool
+{
+    if ([self.currentTool isKindOfClass:[ACEDrawingTextTool class]]) {
+        self.textView.text = @"";
+        [self commitAndHideTextEntry];
+    }
+    self.currentTool = nil;
+}
+
+#pragma mark - Actions
+- (void)clear
+{
+    [self resetTool];
+    [self.bufferArray removeAllObjects];
+    [self.pathArray removeAllObjects];
+    [self updateCacheImage:YES];
+    [self setNeedsDisplay];
+}
+
+#pragma mark - Undo / Redo
+- (NSUInteger)undoSteps
+{
+    return self.bufferArray.count;
+}
+
+- (BOOL)canUndo
+{
+    return self.pathArray.count > 0;
+}
+
+- (void)undoLatestStep
+{
+    // if self.pathArray.count > 0,which means OK to undo
+    if ([self canUndo]) {
+        [self resetTool];
+        id<ACEDrawingTool>tool = [self.pathArray lastObject];
+        [self.bufferArray addObject:tool];
+        [self.pathArray removeLastObject];
+        [self updateCacheImage:YES];
+        [self setNeedsDisplay];
+    }
+}
+
+- (BOOL)canRedo
+{
+    return self.bufferArray.count > 0;
+}
+
+- (void)redoLatestStep
+{
+    // if self.bufferArray.count > 0,which means OK to redo
+    if ([self canRedo]) {
+        [self resetTool];
+        id<ACEDrawingTool>tool = [self.bufferArray lastObject];
+        [self.pathArray addObject:tool];
+        [self.bufferArray removeLastObject];
+        [self updateCacheImage:YES];
+        [self setNeedsDisplay];
+    }
+}
+
+// memory deallocation - destructor it is not used since it is running on ARC envrionment.
+- (void)dealloc
+{
+    self.pathArray = nil;
+    self.bufferArray = nil;
+    self.currentTool = nil;
+    self.image = nil;
+    // self.prev_image = nil;
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
+    
+#if !ACE_HAS_ARC
+    
+    [super dealloc];
+#endif
+}
+
+#pragma mark - Keyboard Events : Not used until 2015.05.05
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    if ( UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+        [self landscapeChanges:notification];
+    } else {
+        [self portraitChanges:notification];
+    }
+}
+
+- (void)landscapeChanges:(NSNotification *)notification {
+    CGPoint textViewBottomPoint = [self convertPoint:self.textView.frame.origin toView:self];
+    CGFloat textViewOriginY = textViewBottomPoint.y;
+    CGFloat textViewBottomY = textViewOriginY + self.textView.frame.size.height;
+    
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    CGFloat offset = (self.frame.size.height - keyboardSize.width) - textViewBottomY;
+    
+    if (offset < 0) {
+        CGFloat newYPos = self.frame.origin.y + offset;
+        self.frame = CGRectMake(self.frame.origin.x,newYPos, self.frame.size.width, self.frame.size.height);
+        
+    }
+}
+- (void)portraitChanges:(NSNotification *)notification {
+    CGPoint textViewBottomPoint = [self convertPoint:self.textView.frame.origin toView:nil];
+    textViewBottomPoint.y += self.textView.frame.size.height;
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    CGFloat offset = (screenRect.size.height - keyboardSize.height) - textViewBottomPoint.y;
+    
+    if (offset < 0) {
+        CGFloat newYPos = self.frame.origin.y + offset;
+        self.frame = CGRectMake(self.frame.origin.x,newYPos, self.frame.size.width, self.frame.size.height);
+        
+    }
+}
+-(void)keyboardDidHide:(NSNotification *)notification
+{
+    self.frame = CGRectMake(self.frame.origin.x,self.originalFrameYPos,self.frame.size.width,self.frame.size.height);
+}
+
+#pragma mark - Text Entry : Not used until 2015.05.05
 - (void) initializeTextBox: (CGPoint)startingPoint {
     
     if (!self.textView) {
@@ -434,191 +594,13 @@
         [self setNeedsDisplay];
         
         [self finishDrawing];
-        
     }
-    
     self.currentTool = nil;
     self.textView.hidden = YES;
     self.textView = nil;
 }
 
-#pragma mark - Keyboard Events
-
-- (void)keyboardDidShow:(NSNotification *)notification
-{
-    if ( UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
-        [self landscapeChanges:notification];
-    } else {
-        [self portraitChanges:notification];
-    }
-}
-
-- (void)landscapeChanges:(NSNotification *)notification {
-    CGPoint textViewBottomPoint = [self convertPoint:self.textView.frame.origin toView:self];
-    CGFloat textViewOriginY = textViewBottomPoint.y;
-    CGFloat textViewBottomY = textViewOriginY + self.textView.frame.size.height;
-
-    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-
-    CGFloat offset = (self.frame.size.height - keyboardSize.width) - textViewBottomY;
-
-    if (offset < 0) {
-        CGFloat newYPos = self.frame.origin.y + offset;
-        self.frame = CGRectMake(self.frame.origin.x,newYPos, self.frame.size.width, self.frame.size.height);
-
-    }
-}
-- (void)portraitChanges:(NSNotification *)notification {
-    CGPoint textViewBottomPoint = [self convertPoint:self.textView.frame.origin toView:nil];
-    textViewBottomPoint.y += self.textView.frame.size.height;
-
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-
-    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-
-    CGFloat offset = (screenRect.size.height - keyboardSize.height) - textViewBottomPoint.y;
-
-    if (offset < 0) {
-        CGFloat newYPos = self.frame.origin.y + offset;
-        self.frame = CGRectMake(self.frame.origin.x,newYPos, self.frame.size.width, self.frame.size.height);
-
-    }
-}
-
--(void)keyboardDidHide:(NSNotification *)notification
-{
-    self.frame = CGRectMake(self.frame.origin.x,self.originalFrameYPos,self.frame.size.width,self.frame.size.height);
-}
 
 
-#pragma mark - Load Image
-
-- (void)loadImage:(UIImage *)image
-{
-    self.image = image;
-    
-    //save the loaded image to persist after an undo step
-    // self.prev_image = [image copy];
-    
-    // when loading an external image, I'm cleaning all the paths and the undo buffer
-    [self.bufferArray removeAllObjects];
-    [self.pathArray removeAllObjects];
-    [self updateCacheImage:YES];
-    [self setNeedsDisplay];
-}
-
-- (void)loadImageData:(NSData *)imageData
-{
-    CGFloat imageScale;
-    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
-        imageScale = [[UIScreen mainScreen] scale];
-        
-    } else {
-        imageScale = 1.0;
-    }
-    
-    UIImage *image = [UIImage imageWithData:imageData scale:imageScale];
-    [self loadImage:image];
-}
-
-- (void)resetTool
-{
-    if ([self.currentTool isKindOfClass:[ACEDrawingTextTool class]]) {
-        self.textView.text = @"";
-        [self commitAndHideTextEntry];
-    }
-    self.currentTool = nil;
-}
-
-#pragma mark - Actions
-
-- (void)clear
-{
-    [self resetTool];
-    [self.bufferArray removeAllObjects];
-    [self.pathArray removeAllObjects];
-    // self.prev_image = nil;
-    [self updateCacheImage:YES];
-    [self setNeedsDisplay];
-}
-
-
-#pragma mark - Undo / Redo
-- (NSUInteger)undoSteps
-{
-    return self.bufferArray.count;
-}
-
-- (BOOL)canUndo
-{
-    return self.pathArray.count > 0;
-}
-
-- (void)undoLatestStep
-{
-    if ([self canUndo]) {
-        [self resetTool];
-        id<ACEDrawingTool>tool = [self.pathArray lastObject];
-        [self.bufferArray addObject:tool];
-        [self.pathArray removeLastObject];
-        [self updateCacheImage:YES];
-        [self setNeedsDisplay];
-    }
-}
-
-- (BOOL)canRedo
-{
-    return self.bufferArray.count > 0;
-}
-
-- (void)redoLatestStep
-{
-    if ([self canRedo]) {
-        [self resetTool];
-        id<ACEDrawingTool>tool = [self.bufferArray lastObject];
-        [self.pathArray addObject:tool];
-        [self.bufferArray removeLastObject];
-        [self updateCacheImage:YES];
-        [self setNeedsDisplay];
-    }
-}
-
-
-- (void)dealloc
-{
-    self.pathArray = nil;
-    self.bufferArray = nil;
-    self.currentTool = nil;
-    self.image = nil;
-    // self.prev_image = nil;
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
-    
-#if !ACE_HAS_ARC
-    
-    [super dealloc];
-#endif
-}
-
-
--(void)didDrawModeOn{
-    NSLog(@"DrawMode On!");
-    isDrawModeOn = YES;
-}
--(void)didDrawModeOff{
-    NSLog(@"DrawMode Off!");
-    isDrawModeOn = NO;
-}
--(void)didChangeToBlueColor{
-    NSLog(@"Blue On!");
-    isBlueColorOn = YES;
-    isRedColorOn = NO;
-}
--(void)didChangeToRedColor{
-    NSLog(@"Red On!");
-    isBlueColorOn = NO;
-    isRedColorOn = YES;
-}
 
 @end

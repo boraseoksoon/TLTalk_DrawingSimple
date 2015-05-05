@@ -38,18 +38,14 @@
 #define ACE_AUTORELEASE(exp) [(exp) autorelease]
 #endif
 
-
 @protocol ACEDrawingTool <NSObject>
 
 @property (nonatomic, strong) UIColor *lineColor;
 @property (nonatomic, assign) CGFloat lineAlpha;
 @property (nonatomic, assign) CGFloat lineWidth;
-
 - (void)setInitialPoint:(CGPoint)firstPoint;
 - (void)moveFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint;
-
 - (void)draw;
-
 @end
 
 #pragma mark -

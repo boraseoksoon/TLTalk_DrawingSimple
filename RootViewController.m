@@ -29,14 +29,18 @@
 #import "SWFrameButton.h"
 #import "BButton.h"
 #import "AppDelegate.h"
-//
-
 #import <SMPageControl/SMPageControl.h>
 #import <QuartzCore/QuartzCore.h>
 
+#pragma mark DEFINES
+
 #define kActionSheetColor       100
 #define kActionSheetTool        101
+#define STARTING_POINT_OF_STACKCOUNT      -1
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
+
+#pragma mark RootViewController Class Extension
 @interface RootViewController (){
     UIView *rootView;
     EAIntroView* intro;
@@ -44,41 +48,6 @@
 @end
 
 @implementation RootViewController
-
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-
-- (UIImage *)blendImage
-{
-    UIImage *bottomImage = self.mainImage.image;
-    UIImage *image = self.drawingView.image;
-    
-    UIGraphicsBeginImageContext( bottomImage.size );
-    CGRect imageFrame = CGRectMake(0.0f, 0.0f, bottomImage.size.width, bottomImage.size.height);
-    
-    // Use existing opacity as is
-    [bottomImage drawInRect:imageFrame];
-    
-    // Apply supplied opacity
-    [image drawInRect:imageFrame blendMode:kCGBlendModeNormal alpha:0.8];
-    
-    UIImage *blendImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return blendImage;
-}
-
-
-#pragma mark - SlideNavigationController Methods -
-- (BOOL)slideNavigationControllerShouldDisplayLeftMenu
-{
-    return YES;
-}
-
-- (BOOL)slideNavigationControllerShouldDisplayRightMenu
-{
-    return NO;
-}
-
 
 #pragma mark UIViewController Life-Cycle
 - (void)didReceiveMemoryWarning {
@@ -88,7 +57,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    /********************************************************************
+     To Check initial loading or not
+     ********************************************************************/
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
     {
         // app already launched
@@ -96,54 +68,48 @@
     else
     {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
         // This is the first launch ever
         self.navigationController.navigationBarHidden = YES;
-        
+
+        // for introduction scrollView at app initial-launching.
         rootView = self.view;
         [self showIntroWithCrossDissolve];
     }
     
+    /********************************************************************
+     Set up the Image Stack to redo or undo
+     ********************************************************************/
+    stackCounter = STARTING_POINT_OF_STACKCOUNT;
+    imageStack = [[NSMutableArray alloc]init];
+    
+    // for the initial image
+    self.mainImage.image = [[UIImage alloc]init];
+    [imageStack addObject:self.mainImage.image];
+    stackCounter += 1;
+    
 
-    self.drawingView.isBlueColorOn = NO;
-    self.drawingView.isRedColorOn = YES;
-    self.drawingView.isDrawModeOn = YES;
-    self.drawingView.userInteractionEnabled = YES;
-    
-    
-    /*
-    self.navigationController.navigationBarHidden = YES;
-
-    rootView = self.view;
-    [self showIntroWithCrossDissolve];
-     */
-    
-    
-    
-    
     /**************************************************************************************************
      Neccessary variables Initializion : Flags  / AppDelegate / observers and so on
      **************************************************************************************************/
     
+    // AppDelegate
     AppDelegate* appDelegate = [[UIApplication sharedApplication]delegate];
     [appDelegate leftMenu].delegate = self;
     
+    // Bool flag
     isDrawModeOn = YES;
     isRedColorOn = YES;
     isBlueColorOn = NO;
+    self.drawingView.isBlueColorOn = NO;
+    self.drawingView.isRedColorOn = YES;
+    self.drawingView.isDrawModeOn = YES;
+    self.drawingView.userInteractionEnabled = YES;
 
-    // datas for drawing
-    // RGB color of brush
-    red = 0.0/255.0;
-    green = 0.0/255.0;
-    blue = 0.0/255.0;
-    // width of brush
-    brush = 5.0;
-    // opacity = 1.0;
-    
-
-    // Do any additional setup after loading the view.
+    // ViewController's Title
     self.title = @"TLTalk";
+    
+    
+    // To validate whether or not camera is available
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
         UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
@@ -155,109 +121,48 @@
         [myAlertView show];
         
     }
-    
-    /********************************************************************
-     Adding Two bottom buttons(Redo, Undo)
-     ********************************************************************/
-    
-    
-    /*
-    BButton *btn2 = [[BButton alloc] initWithFrame:CGRectMake(30, 100, 300, 40) type:BButtonTypeTwitter style:BButtonStyleBootstrapV3];
-    [btn2 setTitle:@"Are you gonna Undo? :)" forState:UIControlStateNormal];
-    // [btn2 addAwesomeIcon:FAArrowCircleLeft beforeTitle:YES];
-    // btn2 = [BButton awesomeButtonWithOnlyIcon:FAArrowCircleLeft type:BButtonTypeDefault style:BButtonStyleBootstrapV3];
-    btn2.center = CGPointMake(self.view.center.x, self.view.center.y + 250);
-    [self.view addSubview:btn2];
-    [btn2 addTarget:self action:@selector(toUndoOrToRedo) forControlEvents:UIControlEventTouchUpInside];
-     */
-    
-    /*
-    BButton *btn3 = [[BButton alloc] initWithFrame:CGRectMake(30, 100, 150, 50) type:BButtonTypeDefault style:BButtonStyleBootstrapV3];
-    [btn3 setTitle:@">" forState:UIControlStateNormal];
-    // [btn3 addAwesomeIcon:FAArrowCircleRight beforeTitle:NO];
-    // btn3 = [BButton awesomeButtonWithOnlyIcon:FAArrowCircleRight type:BButtonTypeDefault style:BButtonStyleBootstrapV3];
-    btn3.frame = CGRectMake(160, 518, 30, 30);
-    [self.view addSubview:btn3];
-    [btn3 addTarget:self action:@selector(redoPressed:) forControlEvents:UIControlEventTouchUpInside];
-    */
-    
-    /*
-    undoButton = [[SWFrameButton alloc] init];
-    [undoButton setTitle:@"UNDO" forState:UIControlStateNormal];
-    [undoButton sizeToFit];
-    undoButton.tintColor = [UIColor redColor];
-    undoButton.center = CGPointMake(self.view.center.x - 50, self.view.center.y + 250);
-    [undoButton addTarget:self action:@selector(undoPressed:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:undoButton];
-    
-    
-    redoButton = [[SWFrameButton alloc] init];
-    [redoButton setTitle:@"REDO" forState:UIControlStateNormal];
-    [redoButton sizeToFit];
-    redoButton.tintColor = [UIColor blueColor];
-    redoButton.center = CGPointMake(self.view.center.x + 50, self.view.center.y + 250);
-    [redoButton addTarget:self action:@selector(redoPressed:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:redoButton];
-    */
-    
-    
+
     
     /********************************************************************
      UINavigation Configuration
      ********************************************************************/
     self.navigationController.navigationBar.topItem.title = @"TLTalk";
 
-    
-    /*
-    UIView *naviTitleView = [[UIView alloc] init];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"toplogo"]];
-    UILabel *titleLabel = [[UILabel alloc] init];
-    titleLabel.text = @"";
-    int naviTitleViewWidth = imageView.image.size.width + titleLabel.intrinsicContentSize.width;
-    [naviTitleView setFrame:CGRectMake(0, 0, naviTitleViewWidth, 44)];
-    naviTitleView.center = CGPointMake(self.navigationController.navigationBar.center.x + self.navigationController.navigationItem.rightBarButtonItem.width, 22);
-    [imageView setFrame:CGRectMake(0, 22-imageView.image.size.height/2, imageView.image.size.width, imageView.image.size.height)];
-    [titleLabel setFrame:CGRectMake(imageView.image.size.width+5, 22-titleLabel.intrinsicContentSize.height/2, titleLabel.intrinsicContentSize.width, titleLabel.intrinsicContentSize.height)];
-    [naviTitleView addSubview:imageView];
-    [naviTitleView addSubview:titleLabel];
-    self.navigationItem.titleView = naviTitleView;
-     */
-    
+
+    /********************************************************************
+     Dropdown Menu configuration
+     ********************************************************************/
     UIImage *takingPhotoIcon = [UIImage imageNamed:@"takingPicture_blue"];
     UIImage *selectFromPhotoalbumIcon = [UIImage imageNamed:@"from_album_blue"];
     UIImage *saveImageToPhotoalbumIcon = [UIImage imageNamed:@"save_image_to_iOS_album_blue"];
-    self.menu = [[UIDropdownMenu alloc] initWithViewController:self
-                                                        titles:[NSArray arrayWithObjects:NSLocalizedString(@"Take a photo", nil), NSLocalizedString(@"From PhtoAlbum", nil), NSLocalizedString(@"Save Image", nil),nil]
-                                                         icons:[NSArray arrayWithObjects:takingPhotoIcon, selectFromPhotoalbumIcon, saveImageToPhotoalbumIcon, nil]
-                                                       actions:[NSArray arrayWithObjects:@"takingPhotoToUseAsBackground", @"selectImageFromiOSPhotoAlbum", @"saveImageToPhotoAlbum", nil]];
+    UIImage *undoImage = [UIImage imageNamed:@"redoIcon"];
+    UIImage *redoImage = [UIImage imageNamed:@"undoIcon"];
     
+    self.menu = [[UIDropdownMenu alloc] initWithViewController:self
+                                                        titles:[NSArray arrayWithObjects:NSLocalizedString(@"Take a photo", nil), NSLocalizedString(@"From PhtoAlbum", nil), NSLocalizedString(@"Save Image", nil),NSLocalizedString(@"Undo Image", nil),NSLocalizedString(@"Redo Image", nil),nil]
+                                                         icons:[NSArray arrayWithObjects:takingPhotoIcon, selectFromPhotoalbumIcon, saveImageToPhotoalbumIcon, undoImage, redoImage, nil]
+                                                       actions:[NSArray arrayWithObjects:@"takingPhotoToUseAsBackground", @"selectImageFromiOSPhotoAlbum", @"saveImageToPhotoAlbum", @"undoImage", @"redoImage", nil]];
+    
+    
+    // UITapGestureRecognizer for dismiss DropDownMenu when tapping the entire self.view area.
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissMenu)];
     [self.view addGestureRecognizer:tap];
     
-    
-    
-    
-    
-    
-    
+    /********************************************************************
+     Drawing configuration
+     ********************************************************************/
     // set the delegate
     self.drawingView.delegate = self;
-    
-    // start with a black pen
+    // set the width of brush
     self.lineWidthSlider.value = self.drawingView.lineWidth;
-    
-    // init the preview image
-    // self.previewImageView.layer.borderColor = [[UIColor blackColor] CGColor];
-    // self.previewImageView.layer.borderWidth = 2.0f;
 }
 
-
-#pragma mark UINavigation + DropDown methods
+#pragma mark DropDownMenu methods
 -(void)takingPhotoToUseAsBackground{
+    
+    // if no camera available is,
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
                                                               message:@"Device has no camera"
@@ -268,7 +173,7 @@
         [myAlertView show];
     }
     
-    
+    // Otherwise,
     else{
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
@@ -277,10 +182,12 @@
         [self presentViewController:picker animated:YES completion:NULL];
     }
     
+    // always hide dropdown menu after button is clicked
     [self.menu hideMenu];
 }
 
 -(void)selectImageFromiOSPhotoAlbum{
+    // To use UIImagePicker Apple provides
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;
@@ -288,132 +195,139 @@
     
     [self presentViewController:picker animated:YES completion:NULL];
     
+    // always hide dropdown menu after button is clicked
     [self.menu hideMenu];
 }
 
+
+// Image Undo / Redo using imageStack, NSMutableArray
+-(void)undoImage{
+
+    // If imageStack has more stack-index to go back,
+    if(stackCounter > 0){
+        stackCounter-=1;
+        self.mainImage.image = [imageStack objectAtIndex:stackCounter];
+    }
+    
+    // Otherwise,
+    else{
+        UIAlertController * view=   [UIAlertController
+                                     alertControllerWithTitle:@"WARNING"
+                                     message:@"Your Image Stack is already 0."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction
+                             actionWithTitle:@"OK"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 // do your job necessary if needed
+                             }];
+        
+        [view addAction:ok];
+        [self presentViewController:view animated:YES completion:nil];
+        [self.menu hideMenu];
+    }
+}
+
+-(void)redoImage{
+    
+    // If ImageStack has more stack index to go forward
+    if([imageStack count] > stackCounter + 1){
+        stackCounter+=1;
+        self.mainImage.image = [imageStack objectAtIndex:stackCounter];
+    }
+    
+    // Otherwise,
+    else{
+        UIAlertController * view=   [UIAlertController
+                                     alertControllerWithTitle:@"WARNING"
+                                     message:@"Your Image Stack is already Full."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction
+                             actionWithTitle:@"OK"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 // do undo job related here
+                                 // [view dismissViewControllerAnimated:YES completion:nil];
+                             }];
+        
+        [view addAction:ok];
+        [self presentViewController:view animated:YES completion:nil];
+        [self.menu hideMenu];
+    }
+}
+
+
 -(void)saveImageToPhotoAlbum{
     
-    // for the single one.
-    /*
-    UIGraphicsBeginImageContextWithOptions(self.drawingView.bounds.size, NO, 0.0);
-    [self.drawingView.image drawInRect:CGRectMake(0, 0, self.drawingView.frame.size.width, self.drawingView.frame.size.height)];
-    UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    */
-    
-    // modified one
-    UIImage *personImage = self.drawingView.image;
-    UIImage *hatImage = self.mainImage.image;
-    CGSize finalSize = [personImage size];
-    CGSize hatSize = [hatImage size];
-    UIGraphicsBeginImageContext(finalSize);
-    [hatImage drawInRect:CGRectMake(0,0,finalSize.width,finalSize.height)];
-    [personImage drawInRect:CGRectMake(0,0,finalSize.width,finalSize.height)];
+    // for the modified one image
+    // merge two image necessary, DrawingView,which is in front of ImageView and ImageView, which is in back of drawingImage and save it to iOS PhotoAlbum using C function(UIImageWriteToSavedPhotosAlbum) Apple Provides
+    UIImage *drawingView = self.drawingView.image;
+    UIImage *backgroundImageView = self.mainImage.image;
+    CGSize drawinViewfinalSize = [drawingView size];
+    UIGraphicsBeginImageContext(drawinViewfinalSize);
+    [backgroundImageView drawInRect:CGRectMake(0,0,drawinViewfinalSize.width,drawinViewfinalSize.height)];
+    [drawingView drawInRect:CGRectMake(0,0,drawinViewfinalSize.width,drawinViewfinalSize.height)];
 
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-
-    
-    
-    
     UIImageWriteToSavedPhotosAlbum(newImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
-    
-
-    
 }
-
-
--(UIImage *) addImageToImage:(UIImage *)img withImage2:(UIImage *)img2 andRect:(CGRect)cropRect withImageWidth:(int) width
-{
-    CGSize size = CGSizeMake(width,40);
-    UIGraphicsBeginImageContext(size);
-    
-    CGPoint pointImg1 = CGPointMake(0,0);
-    [img drawAtPoint:pointImg1];
-    
-    CGPoint pointImg2 = cropRect.origin;
-    [img2 drawAtPoint: pointImg2];
-    
-    UIImage* result = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return result;
-    
-}
-
-
 
 -(void)dismissMenu{
      [self.menu hideMenu];
 }
 
-#pragma mark undo / redo buttons method
--(void)toUndoOrToRedo{
-    UIAlertController * view=   [UIAlertController
-                                 alertControllerWithTitle:@"To undo or redo"
-                                 message:@"That is problem."
-                                 preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    UIAlertAction* undo = [UIAlertAction
-                           actionWithTitle:@"Undo"
-                           style:UIAlertActionStyleDefault
-                           handler:^(UIAlertAction * action)
-                           {
-                               [self undoDrawing];
-                               // do undo job related here
-                               // [view dismissViewControllerAnimated:YES completion:nil];
-                               
-                           }];
-    UIAlertAction* redo = [UIAlertAction
-                           actionWithTitle:@"Redo"
-                           style:UIAlertActionStyleDefault
-                           handler:^(UIAlertAction * action)
-                           {
-                               [self redoDrawing];
-                               // do redo job related here.
-                               // [view dismissViewControllerAnimated:YES completion:nil];
-                           }];
-    
-    UIAlertAction* cancel = [UIAlertAction
-                             actionWithTitle:@"Cancel"
-                             style:UIAlertActionStyleDestructive
-                             handler:^(UIAlertAction * action)
-                             {
-                                 [view dismissViewControllerAnimated:YES completion:nil];
-                             }];
-    
-    
-    
-    [view addAction:undo];
-    [view addAction:redo];
-    [view addAction:cancel];
-    [self presentViewController:view animated:YES completion:nil];
-}
-
-
-#pragma mark IBActions
-- (IBAction)openDrawTools:(id)sender {
-    /* do something you need */
-    NSLog(@"open up!");
-}
-
-- (IBAction)undoAction:(id)sender{
-    NSLog(@"undoAction");
-}
-- (IBAction)redoAction:(id)sender{
-    NSLog(@"redoAction");
-}
-
 #pragma mark - Image Picker Controller delegate methods
+
+// when you load image from your iOS Photo Album, this message will be sent as the delegate method.
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.mainImage.image = chosenImage;
+    // WHEN USUAL SITUATION IS IN ACTION
+    // store image to the imageStack in common situation
+    if([imageStack count] == stackCounter + 1){
+        
+        // Get the UIImage instance user selects from iOS PhotoAlbum.
+        UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+        
+        // Get the Image Added to imageStack
+        [imageStack addObject:chosenImage];
+        // For sure, stackCounter also increases up +1
+        stackCounter+=1;
+        
+        // Use Image Instance from imageStack using stackCounter.
+        self.mainImage.image = [imageStack objectAtIndex:stackCounter];
+    }
+    
+    // WHEN UNDO / REDO IS IN ACTION
+    // store image to the imageStack while redo / undo is on the progress
+    else{
+        // Get the UIImage instance user selects from iOS PhotoAlbum.
+        UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+
+        // iterate to remove all object until inside the current stackCounter + 1, which is the current index.
+        while([imageStack count] > stackCounter + 1){
+            [imageStack removeLastObject];
+        }
+        
+        // add Image to imageStack array
+        [imageStack addObject:chosenImage];
+        
+        // make stackCount equal to imageStack count
+        stackCounter = [imageStack count] -1 ;
+
+        // use background image using last index image object of imageStack
+        self.mainImage.image = [imageStack objectAtIndex:stackCounter];
+    }
+
+    // after loading image, to prevent undo/redo button from being hidden, do it again
     [self.view addSubview:undoButton];
     [self.view addSubview:redoButton];
- 
-    [self clearDraw];
     
+    // image selection viewcontroller will dismiss.
     [picker dismissViewControllerAnimated:YES completion:NULL];
- 
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -432,106 +346,7 @@
     }
 }
 
-#pragma mark basic instance methods
--(void)redoDrawing{
-    NSLog(@"redoDrawing");
-}
-
--(void)undoDrawing{
-    NSLog(@"undoDrawing");
-}
-#pragma mark basic class methods
-
-
-
-
-#pragma mark basic class methods
-
-
-#pragma mark overriding viewController touches methods
-/*
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    if(isDrawModeOn){
-        mouseSwiped = NO;
-        UITouch *touch = [touches anyObject];
-        lastPoint = [touch locationInView:self.view];
-    }
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if(isDrawModeOn){
-        mouseSwiped = YES;
-        UITouch *touch = [touches anyObject];
-        CGPoint currentPoint = [touch locationInView:self.view];
-        
-        UIGraphicsBeginImageContext(self.view.frame.size);
-        [self.drawingView.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
-        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush );
-        
-        // for blueColor
-        if(isBlueColorOn){
-            CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0.0, 0.0, 1.0, 1.0);
-            // CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), [[UIColor blueColor] CGColor]);
-        }
-        // for redColor
-        else{
-            CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 1.0, 0.0, 0.0, 1.0);
-        }
-        CGContextSetBlendMode(UIGraphicsGetCurrentContext(),kCGBlendModeNormal);
-        CGContextStrokePath(UIGraphicsGetCurrentContext());
-        self.mainImage.image = UIGraphicsGetImageFromCurrentImageContext();
-        // [self.mainImage setAlpha:opacity];
-        UIGraphicsEndImageContext();
-        
-        lastPoint = currentPoint;
-    }
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    
-    if(isDrawModeOn){
-        if(!mouseSwiped) {
-            UIGraphicsBeginImageContext(self.view.frame.size);
-            [self.mainImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-            CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-            CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush);
-            
-            // blue
-            if(isBlueColorOn){
-                CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0.0, 0.0, 1.0, 1.0);
-            }
-            // red
-            else{
-                CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 1.0, 0.0, 0.0, 1.0);
-            }
-            
-            
-            CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-            CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-            CGContextStrokePath(UIGraphicsGetCurrentContext());
-            CGContextFlush(UIGraphicsGetCurrentContext());
-            self.mainImage.image = UIGraphicsGetImageFromCurrentImageContext();
-            UIGraphicsEndImageContext();
-        }
-        
-        UIGraphicsBeginImageContext(self.view.frame.size);
-        [self.mainImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:1.0];
-        
-        // [self.mainImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:opacity];
-        
-        self.mainImage.image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-
-    }
-     
-}
-*/
-#pragma mark DrawTollViewController Delegate
+#pragma mark DrawToolViewController Delegate
 -(void)didEraseAll{
     UIAlertController * view=   [UIAlertController
                                  alertControllerWithTitle:@"WARNING"
@@ -543,7 +358,7 @@
                           style:UIAlertActionStyleDefault
                           handler:^(UIAlertAction * action)
                           {
-                              self.mainImage.image = [UIImage imageNamed:@""];
+                              // self.mainImage.image = [UIImage imageNamed:@""];
                               // do something you need
                               [self clearDraw];
                               
@@ -562,33 +377,22 @@
 }
 
 -(void)didDrawModeOn{
-    // NSLog(@"DrawMode On!");
     self.drawingView.isDrawModeOn = YES;
 }
 -(void)didDrawModeOff{
-    // NSLog(@"DrawMode Off!");
     self.drawingView.isDrawModeOn = NO;
 }
 -(void)didChangeToBlueColor{
-    // NSLog(@"Blue On!");
     self.drawingView.isBlueColorOn = YES;
     self.drawingView.isRedColorOn = NO;
 }
 -(void)didChangeToRedColor{
-    // NSLog(@"Red On!");
     self.drawingView.isBlueColorOn = NO;
     self.drawingView.isRedColorOn = YES;
 }
 
-
-#pragma mark - Actions
-
-- (void)updateButtonStatus
-{
-    self.undoButton.enabled = [self.drawingView canUndo];
-    self.redoButton.enabled = [self.drawingView canRedo];
-}
-
+#pragma mark - IBActions
+// Drawing Undo / Redo
 - (IBAction)undo:(id)sender
 {
     [self.drawingView undoLatestStep];
@@ -601,7 +405,19 @@
     [self updateButtonStatus];
 }
 
-// it actually executes clear.
+#pragma mark - ACEDrawing
+- (void)drawingView:(ACEDrawingView *)view didEndDrawUsingTool:(id<ACEDrawingTool>)tool;
+{
+    [self updateButtonStatus];
+}
+
+- (void)updateButtonStatus
+{
+    self.undoButton.enabled = [self.drawingView canUndo];
+    self.redoButton.enabled = [self.drawingView canRedo];
+}
+
+// it actually executes Drawing Clear.
 - (void)clearDraw
 {
     // self.mainImage.image = nil;
@@ -610,17 +426,8 @@
 }
 
 
-#pragma mark - ACEDrawing View Delegate
-- (void)drawingView:(ACEDrawingView *)view didEndDrawUsingTool:(id<ACEDrawingTool>)tool;
-{
-    [self updateButtonStatus];
-}
-
-
-
-
-
-#pragma mark Introduction : EAIntroView Opensource
+#pragma mark Introduction Setup : EAIntroView Opensource
+// OpenSource Introduction ScorllViewController
 - (void)showIntroWithCrossDissolve {
     EAIntroPage *page1 = [EAIntroPage page];
     // page1.title = @"Hello world";
@@ -629,8 +436,6 @@
     page1.descColor = UIColorFromRGB(0x0080FF);
     page1.bgImage = [UIImage imageNamed:@"white.jpg"];
     page1.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"intro1"]];
-    
-    
     
     EAIntroPage *page2 = [EAIntroPage page];
     page2.title = @"This is page 2";
@@ -667,11 +472,22 @@
     [intro showInView:rootView animateDuration:0.3];
 }
 #pragma mark - EAIntroView delegate
-
 - (void)introDidFinish:(EAIntroView *)introView {
     NSLog(@"introDidFinish callback");
     self.navigationController.navigationBarHidden = NO;
     // [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
+
+#pragma mark - SlideNavigationController Methods -
+- (BOOL)slideNavigationControllerShouldDisplayLeftMenu
+{
+    return YES;
+}
+
+- (BOOL)slideNavigationControllerShouldDisplayRightMenu
+{
+    return NO;
+}
+
 
 @end

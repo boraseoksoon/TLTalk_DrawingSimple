@@ -42,11 +42,11 @@
 	self.backgroundColor = [UIColor clearColor];
 	self.hidden = YES;
 
-	// 레이아웃 선행 설정
+	// layout configuration prior
 	extern const CGFloat DROPDOWN_ITEM_HEIGHT;
 	self.height = DROPDOWN_ITEM_HEIGHT * titles.count + titles.count - 1;
 
-	// 레이아웃 설정
+	// Setup layout
 	UIView *v = vc.view;
 	[v addSubview:self];
     
@@ -56,7 +56,7 @@
 	[v addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:v attribute:NSLayoutAttributeRight multiplier:1.0 constant:0]];
 	[v addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:v attribute:NSLayoutAttributeTop multiplier:1.0 constant:64]];
 
-    // 백그라운드 이미지 설정
+    // Set up image
     UIImage *image = [UIImage imageNamed:@"DropdownBox"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[image resizableImageWithCapInsets:UIEdgeInsetsMake(2, 3, 3, 2)]];
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -66,14 +66,13 @@
     [self addConstraint:[NSLayoutConstraint constraintWithItem:imageView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:imageView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
 
-	// 메뉴 자체 설정
-	// 메뉴 아이템 추가
+	// Add Item
 	for (int i = 0; i < titles.count; ++i) {
 		UIDropdownItem *item = [[UIDropdownItem alloc] initWithViewController:vc menu:self title:titles[i] icon:icons[i] action:NSSelectorFromString(actions[i]) index:i];
 		(void)item;
 	}
 
-	// 메뉴 자체 설정
+	// Setup Menu
 	FAKIonIcons *navIcon = [FAKIonIcons naviconIconWithSize:30];
 	vc.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[navIcon imageWithSize:CGSizeMake(15, 15)] style:UIBarButtonItemStylePlain target:self action:@selector(toggleMenu)];
     // added for dropdown navigation item style
