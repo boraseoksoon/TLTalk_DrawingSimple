@@ -23,9 +23,9 @@ To be updated(soon)
 
 # UPDATE-LOG
 2015.05.05
-	UPDATE
-		1. Imported Image UNDO, REDO
-		2. Drawing Instance is alive even though Image is imported on it. 
+ UPDATE
+  1. Imported Image UNDO, REDO
+  2. Drawing Instance is alive even though Image is imported on it 
 
 # INFORMATION
 Since it is still proto type, I'll update it soon for many : unorganized bunch of comments, resources, directory and naming and so on. keep going on.
